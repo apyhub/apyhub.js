@@ -31,13 +31,12 @@ async function screenshot({
   quality &&
     checkParamTypes(
       { quality: quality?.toString() },
-      [1, 2, 3, 4, 5].map((i) => i.toString())
+      [1, 2, 3, 4, 5].map(i => i.toString())
     );
 
   const url = `
-        https://api.apyhub.com/generate/screenshot/webpage/image-${responseFormat}?output=${
-    output ?? "output.png"
-  }&delay=${delay ?? 3}&quality=${quality ?? 5}&url=${input}`;
+        https://api.apyhub.com/generate/screenshot/webpage/image-${responseFormat}?output=${output ??
+    "output.png"}&delay=${delay ?? 3}&quality=${quality ?? 5}&url=${input}`;
 
   return await client.request("get", url);
 }

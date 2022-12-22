@@ -1,8 +1,8 @@
-import fetch from 'cross-fetch';
-import FormData from 'form-data';
+import fetch from "cross-fetch";
+import FormData from "form-data";
 
 class ApyClient {
-  protected readonly baseUrl = 'https://api.apyhub.com';
+  protected readonly baseUrl = "https://api.apyhub.com";
   protected readonly headers: any;
   private readonly requestQueue: any[];
   private readonly rateLimit: number;
@@ -13,7 +13,7 @@ class ApyClient {
   constructor(apyToken: string, options?: { rateLimit: number }) {
     this.headers = {
       // "Content-Type": "application/json",
-      'apy-token': apyToken,
+      "apy-token": apyToken,
     };
     this.requestQueue = [];
     this.rateLimit = options?.rateLimit ?? 1;
@@ -23,13 +23,13 @@ class ApyClient {
   }
 
   async request(
-    method: 'get' | 'post',
+    method: "get" | "post",
     url: string,
     data?: any,
     options: any = {}
   ): Promise<any> {
-    if (!this.headers['apy-token']) {
-      throw new Error('apy-token is required');
+    if (!this.headers["apy-token"]) {
+      throw new Error("apy-token is required");
     }
 
     const headers = { ...this.headers, ...options.headers };
@@ -76,15 +76,15 @@ class ApyClient {
 
       let response: any;
       switch (request.method) {
-        case 'get':
+        case "get":
           response = await fetch(request.url, {
-            method: 'GET',
+            method: "GET",
             headers: request.headers,
           }).then(handleResponse);
           break;
-        case 'post':
+        case "post":
           response = await fetch(request.url, {
-            method: 'POST',
+            method: "POST",
             headers: request.headers,
             body:
               request.data instanceof FormData
@@ -115,12 +115,12 @@ const handleResponse = async (response: Response): Promise<any> => {
     const errorCode = response.status;
     throw new Error(`${errorCode}: ${error}`);
   }
-  const contentType = response.headers.get('Content-Type') ?? '';
+  const contentType = response.headers.get("Content-Type") ?? "";
   const blobTypes = new Set([
-    'image/png',
-    'image/jpeg',
-    'application/zip',
-    'application/pdf',
+    "image/png",
+    "image/jpeg",
+    "application/zip",
+    "application/pdf",
   ]);
 
   const handleBlob = async (responseData: Response): Promise<Blob> =>
@@ -133,8 +133,8 @@ const handleResponse = async (response: Response): Promise<any> => {
   ): Promise<Record<string, any> | undefined> => await responseData.json();
 
   switch (true) {
-    case contentType.includes('text/plain'):
-    case contentType.includes('text/html'):
+    case contentType.includes("text/plain"):
+    case contentType.includes("text/html"):
       return await handleText(response);
     default:
       return blobTypes.has(contentType)
@@ -153,7 +153,7 @@ function getInstance(
 ): ApyClient {
   if (!instance) {
     if (!apyToken) {
-      throw new Error('apyToken is required');
+      throw new Error("apyToken is required");
     }
     instance = new ApyClient(apyToken, options);
   }

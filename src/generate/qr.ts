@@ -23,9 +23,8 @@ async function qr({
   checkMissingParams({ input, responseFormat });
   checkParamTypes({ responseFormat }, ["file", "url"]);
 
-  const url = `https://api.apyhub.com/generate/qr-code/${responseFormat}?output=${
-    output ?? "output.png"
-  }`;
+  const url = `https://api.apyhub.com/generate/qr-code/${responseFormat}?output=${output ??
+    "output.png"}`;
   return await client.request("post", url, { content: input });
 }
 

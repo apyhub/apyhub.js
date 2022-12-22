@@ -1,23 +1,7 @@
 import { getInstance } from "../ApyClient";
 import { checkMissingParams } from "../utils/checkMissingParams";
+import { getFormData } from "../utils/getFormData";
 import { isFileOrUrl } from "../utils/isFileOrUrl";
-
-import * as fs from "fs";
-import * as path from "path";
-import FormData from "form-data";
-
-function getFormData(filePath: string, fieldName: string): FormData {
-  const absoluteFilePath = path.resolve(filePath);
-  const file = fs.readFileSync(absoluteFilePath);
-  const formData = new FormData();
-  formData.append(fieldName, Buffer.from(file), {
-    contentType: "application/octet-stream",
-    filename: "test.jpg",
-  });
-
-  console.log(formData instanceof FormData);
-  return formData;
-}
 
 /**
  * Extracts metadata from an image.

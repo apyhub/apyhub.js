@@ -44,9 +44,8 @@ async function thumbnail({
     endpoint = "file-urls";
   }
 
-  const requestUrl = `https://api.apyhub.com/generate/image/thumbnail/${endpoint}?output=${
-    output ?? "thumbnail.png"
-  }&width=${width}&height=${height}`;
+  const requestUrl = `https://api.apyhub.com/generate/image/thumbnail/${endpoint}?output=${output ??
+    "thumbnail.png"}&width=${width}&height=${height}`;
 
   return await client.request(
     "post",

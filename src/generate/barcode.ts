@@ -23,9 +23,8 @@ async function barcode({
   checkMissingParams({ input, responseFormat });
   checkParamTypes({ responseFormat }, ["file", "url"]);
 
-  const url = `https://api.apyhub.com/generate/barcode/${responseFormat}?output=${
-    output ?? "output.png"
-  }`;
+  const url = `https://api.apyhub.com/generate/barcode/${responseFormat}?output=${output ??
+    "output.png"}`;
   return await client.request("post", url, { content: input });
 }
 

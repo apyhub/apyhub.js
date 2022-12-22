@@ -39,9 +39,8 @@ async function charts({
   checkParamTypes({ chartType }, ["bar", "pie", "stacked"]);
   checkParamTypes({ theme }, ["light", "dark"]);
 
-  const url = `https://api.apyhub.com/generate/charts/${chartType}/${responseFormat}?output=${
-    output ?? "output.png"
-  }`;
+  const url = `https://api.apyhub.com/generate/charts/${chartType}/${responseFormat}?output=${output ??
+    "output.png"}`;
   const payload = {
     title,
     theme: theme[0].toUpperCase() + theme.slice(1),
