@@ -55,5 +55,8 @@
   "dependencies": {
     "cross-fetch": "^3.1.5",
     "form-data": "^4.0.0"
+  },
+  "optionalDependencies": {
+    "esbuild-android-arm64": "^0.15.18"
   }
 }
