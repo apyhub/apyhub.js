@@ -2,13 +2,28 @@ import * as fs from "fs";
 import * as path from "path";
 import FormData from "form-data";
 
-export function getFormData(filePath: string, fieldName: string): FormData {
-  const absoluteFilePath = path.resolve(filePath);
-  const file = fs.readFileSync(absoluteFilePath);
+export function getFormData(
+  filePath: string | string[],
+  fieldName: string
+): FormData {
   const formData = new FormData();
-  formData.append(fieldName, Buffer.from(file), {
-    contentType: "application/octet-stream",
-    filename: path.basename(absoluteFilePath),
-  });
+  if (Array.isArray(filePath)) {
+    filePath.forEach(fp => {
+      const absoluteFilePath = path.resolve(fp);
+      const file = fs.readFileSync(absoluteFilePath);
+      formData.append(fieldName, Buffer.from(file), {
+        contentType: "application/octet-stream",
+        filename: path.basename(absoluteFilePath),
+      });
+    });
+  } else {
+    const absoluteFilePath = path.resolve(filePath);
+    const file = fs.readFileSync(absoluteFilePath);
+    formData.append(fieldName, Buffer.from(file), {
+      contentType: "application/octet-stream",
+      filename: path.basename(absoluteFilePath),
+    });
+  }
+
   return formData;
 }
