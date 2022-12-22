@@ -1,5 +1,5 @@
 {
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
@@ -31,7 +31,7 @@
     "singleQuote": true,
     "trailingComma": "es5"
   },
-  "name": "apyhub.js",
+  "name": "apyhub",
   "author": "edy@apyhub.com",
   "module": "dist/apyhub.js.esm.js",
   "size-limit": [

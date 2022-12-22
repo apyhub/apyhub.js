@@ -1,4 +1,5 @@
 import * as fs from 'fs';
+import fetch from 'cross-fetch';
 
 function isValidUrl(url: string): boolean {
   try {
