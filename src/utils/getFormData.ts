@@ -8,7 +8,7 @@ export function getFormData(filePath: string, fieldName: string): FormData {
   const formData = new FormData();
   formData.append(fieldName, Buffer.from(file), {
     contentType: "application/octet-stream",
-    filename: "test.jpg",
+    filename: path.basename(absoluteFilePath),
   });
   return formData;
 }
