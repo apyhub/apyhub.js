@@ -1,13 +1,14 @@
 import { getInstance } from "../ApyClient";
 import { checkMissingParams } from "../utils/checkMissingParams";
 import { checkParamTypes } from "../utils/checkParamsTypes";
+import { getFormData } from "../utils/getFormData";
 import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 /**
 
 Generates a thumbnail image from the given input and returns the thumbnail in the specified format.
 @param {Object} options - The options object.
-@param {(string|Buffer)} options.input - The input image. This can be either a file path or a Buffer containing the image file.
+@param {(string)} options.input - The input image. This can be either a file path or a Buffer containing the image file.
 @param {"url"|"file"} options.responseFormat - The format in which the thumbnail should be returned. Valid values are "url" or "file".
 @param {string} [options.output] - The file path where the thumbnail should be saved. This parameter is only used if responseFormat is "file".
 @param {number} options.width - The desired width of the thumbnail image.
@@ -21,7 +22,7 @@ async function thumbnail({
   width,
   height,
 }: {
-  input: string | Buffer;
+  input: string;
   responseFormat: "url" | "file";
   output?: string;
   width: number;
@@ -50,13 +51,7 @@ async function thumbnail({
   return await client.request(
     "post",
     requestUrl,
-    inputType === "file" ? { image: input } : { url: input },
-    {
-      headers: {
-        "Content-Type":
-          inputType === "url" ? "application/json" : "multipart/form-data",
-      },
-    }
+    inputType === "file" ? getFormData(input, "image") : { url: input }
   );
 }
 
