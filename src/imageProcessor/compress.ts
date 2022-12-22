@@ -1,6 +1,7 @@
 import { getInstance } from "../ApyClient";
 import { checkMissingParams } from "../utils/checkMissingParams";
 import { checkParamTypes } from "../utils/checkParamsTypes";
+import { getFormData } from "../utils/getFormData";
 import { handleEndPoint } from "../utils/handleEndpoint";
 import { isFileOrUrl } from "../utils/isFileOrUrl";
 
@@ -8,7 +9,7 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 Compresses an image.
 @param {Object} options - The options for the function.
-@param {(string|Buffer)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
+@param {(string)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
 @param {"url"|"file"} options.responseFormat - The desired response format. Can be either "url" or "file".
 @param {number} options.quality - The desired quality of the output image. Must be a number between 1 and 99.
 @param {string} [options.output] - The desired file name for the output image. Default is "output.png".
@@ -20,7 +21,7 @@ async function compress({
   quality,
   output,
 }: {
-  input: string | Buffer;
+  input: string;
   responseFormat: "url" | "file";
   // TODO: add typescript support for quality > 1 && < 99
   quality: number;
@@ -31,8 +32,6 @@ async function compress({
   checkParamTypes({ responseFormat }, ["file", "url"]);
 
   const inputType = isFileOrUrl(input);
-  const contentType =
-    inputType === "file" ? "multipart/form-data" : "application/json";
 
   const requestUrl = `https://api.apyhub.com/processor/image/${handleEndPoint(
     "compress",
@@ -43,8 +42,7 @@ async function compress({
   return await client.request(
     "post",
     requestUrl,
-    inputType === "file" ? { image: input } : { url: input },
-    { headers: { "Content-Type": contentType } }
+    inputType === "file" ? getFormData(input, "image") : { url: input }
   );
 }
 

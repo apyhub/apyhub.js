@@ -24,6 +24,12 @@ export function getFormData(
       filename: path.basename(absoluteFilePath),
     });
   }
-
   return formData;
+}
+
+export function getFile(filePath: string): Buffer {
+  const absoluteFilePath = path.resolve(filePath);
+  const file = fs.readFileSync(absoluteFilePath);
+
+  return Buffer.from(file);
 }
