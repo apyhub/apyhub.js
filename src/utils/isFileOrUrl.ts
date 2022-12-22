@@ -1,4 +1,4 @@
-export function isFileOrUrl(input: any): string {
+export function isFileOrUrl(input: string): string {
   // Check if the input is a valid URL
   if (input.startsWith("http://") || input.startsWith("https://")) {
     return "url";
