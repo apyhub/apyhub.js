@@ -1,5 +1,5 @@
-import * as fs from 'fs';
-import fetch from 'cross-fetch';
+import * as fs from "fs";
+import fetch from "cross-fetch";
 
 function isValidUrl(url: string): boolean {
   try {
@@ -26,27 +26,27 @@ function isValidUrl(url: string): boolean {
 
 export async function download(data: any, filePath: string): Promise<void> {
   let buffer: Buffer = Buffer.alloc(0);
-  if (typeof data === 'string') {
+  if (typeof data === "string") {
     buffer = Buffer.from(data);
-  } else if (typeof data === 'object' && data.data) {
+  } else if (typeof data === "object" && data.data) {
     if (isValidUrl(data.data)) {
       const response = await fetch(data.data);
       buffer = Buffer.from(await response.arrayBuffer());
-    } else if (typeof data.data === 'string') {
+    } else if (typeof data.data === "string") {
       buffer = Buffer.from(data.data);
-    } else if ('data' in data && typeof data.data === 'object') {
+    } else if ("data" in data && typeof data.data === "object") {
       buffer = Buffer.from(JSON.stringify(data.data));
     } else {
-      throw new Error('Invalid data.data');
+      throw new Error("Invalid data.data");
     }
   } else if (
-    typeof data === 'object' &&
+    typeof data === "object" &&
     data.type &&
-    typeof data.arrayBuffer === 'function'
+    typeof data.arrayBuffer === "function"
   ) {
     buffer = Buffer.from(await data.arrayBuffer());
   } else {
-    throw new Error('Invalid data');
+    throw new Error("Invalid data");
   }
 
   fs.writeFile(filePath, buffer, err => {

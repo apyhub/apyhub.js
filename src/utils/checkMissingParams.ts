@@ -3,7 +3,7 @@ export const checkMissingParams = (params: Record<string, any>): void => {
   if (missingParams.length > 0) {
     const errorMessage = `Missing parameters: ${missingParams
       .map(([key]) => key)
-      .join(', ')}`;
+      .join(", ")}`;
     throw new Error(errorMessage);
   }
 };

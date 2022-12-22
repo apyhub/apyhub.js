@@ -1,7 +1,7 @@
-import { getInstance } from '../ApyClient';
-import { checkMissingParams } from '../utils/checkMissingParams';
-import { getFormData } from '../utils/getFormData';
-import { isFileOrUrl } from '../utils/isFileOrUrl';
+import { getInstance } from "../ApyClient";
+import { checkMissingParams } from "../utils/checkMissingParams";
+import { getFormData } from "../utils/getFormData";
+import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 /**
  * Extracts metadata from an image.
@@ -13,16 +13,16 @@ async function imageMetadata(image: string): Promise<{ data: string }> {
   const client = getInstance();
   checkMissingParams({ image });
 
-  const inputType = isFileOrUrl(image) === 'file' ? 'file' : 'file-urls';
+  const inputType = isFileOrUrl(image) === "file" ? "file" : "file-urls";
   // const contentType =
   //   inputType === "file" ? "multipart/form-data" : "application/json";
 
   const url = `https://api.apyhub.com/processor/image/metadata/${inputType}`;
 
   return await client.request(
-    'post',
+    "post",
     url,
-    inputType === 'file' ? getFormData(image, 'image') : { url: image }
+    inputType === "file" ? getFormData(image, "image") : { url: image }
     // { headers: { "Content-Type": contentType } }
   );
 }
