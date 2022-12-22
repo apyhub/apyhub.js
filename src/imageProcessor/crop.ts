@@ -1,6 +1,7 @@
 import { getInstance } from "../ApyClient";
 import { checkMissingParams } from "../utils/checkMissingParams";
 import { checkParamTypes } from "../utils/checkParamsTypes";
+import { getFormData } from "../utils/getFormData";
 import { handleEndPoint } from "../utils/handleEndpoint";
 import { isFileOrUrl } from "../utils/isFileOrUrl";
 
@@ -8,7 +9,7 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 Crops an image.
 @param {Object} options - The options for the function.
-@param {(string|Buffer)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
+@param {(string)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
 @param {"url"|"file"} options.responseFormat - The desired response format. Can be either "url" or "file".
 @param {number} options.height - The desired height of the output image.
 @param {number} options.width - The desired width of the output image.
@@ -23,7 +24,7 @@ async function crop({
   width,
   output,
 }: {
-  input: string | Buffer;
+  input: string;
   responseFormat: "url" | "file";
   height: number;
   width: number;
@@ -34,8 +35,6 @@ async function crop({
   checkParamTypes({ responseFormat }, ["file", "url"]);
 
   const inputType = isFileOrUrl(input);
-  const contentType =
-    inputType === "file" ? "multipart/form-data" : "application/json";
 
   const url = `https://api.apyhub.com/processor/image/${handleEndPoint(
     "crop",
@@ -46,8 +45,7 @@ async function crop({
   return await client.request(
     "post",
     url,
-    inputType === "file" ? { image: input } : { url: input },
-    { headers: { "Content-Type": contentType } }
+    inputType === "file" ? getFormData(input, "image") : { url: input }
   );
 }
 
