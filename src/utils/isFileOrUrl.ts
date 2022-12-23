@@ -1,16 +1,13 @@
-export function isFileOrUrl(input: string): string {
-  // Check if the input is a valid URL
-  if (input.startsWith("http://") || input.startsWith("https://")) {
+export function isFileOrUrl(input: string | Buffer): string {
+  if (input instanceof Buffer) {
+    return "file";
+  } else if (
+    input.match(
+      /^https?:\/\/(www\.)?[-a-zA-Z0-9@:%._\+~#=]{1,256}\.[a-zA-Z0-9()]{1,6}\b([-a-zA-Z0-9()@:%_\+.~#?&//=]*)/
+    )
+  ) {
     return "url";
-  }
-
-  // Check if the input is a valid file path
-  if (input.startsWith("/") || input.startsWith(".")) {
+  } else {
     return "file";
   }
-
-  // If the input does not match either of the above conditions, it is not a valid file or URL
-  throw new Error(
-    "Invalid input provided. Please provide a valid file path or URL."
-  );
 }
