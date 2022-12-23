@@ -1,4 +1,4 @@
-import fetch from "cross-fetch";
+import fetch, { Request } from "cross-fetch";
 import FormData from "form-data";
 
 class ApyClient {
@@ -9,17 +9,30 @@ class ApyClient {
   private readonly rateLimitPeriod: number;
   private rateLimitTimer: any;
   private requestPromises: any[];
+  protected debug: boolean;
 
-  constructor(apyToken: string, options?: { rateLimit: number }) {
+  constructor(
+    apyToken: string,
+    options?: { rateLimit: number; debug: boolean }
+  ) {
     this.headers = {
-      // "Content-Type": "application/json",
       "apy-token": apyToken,
     };
+    this.debug = options?.debug ?? false;
     this.requestQueue = [];
     this.rateLimit = options?.rateLimit ?? 1;
     this.rateLimitPeriod = 1000; // Set the rate limit period to 1 second (1000 milliseconds)
     this.rateLimitTimer = null;
     this.requestPromises = [];
+  }
+
+  private debugRequest(method: string, url: string, data?: any): void {
+    const request = new Request(url, {
+      method,
+      headers: this.headers,
+      body: data,
+    });
+    console.log(request);
   }
 
   async request(
@@ -31,8 +44,12 @@ class ApyClient {
     if (!this.headers["apy-token"]) {
       throw new Error("apy-token is required");
     }
-
     const headers = { ...this.headers, ...options.headers };
+
+    console.log(this.debug);
+    if (this.debug) {
+      this.debugRequest(method, url, data);
+    }
 
     // Push the request to the request queue
     this.requestQueue.push({ method, url, data, headers });
@@ -80,7 +97,7 @@ class ApyClient {
           response = await fetch(request.url, {
             method: "GET",
             headers: request.headers,
-          }).then(handleResponse);
+          }).then(this.handleResponse.bind(this));
           break;
         case "post":
           response = await fetch(request.url, {
@@ -90,7 +107,7 @@ class ApyClient {
               request.data instanceof FormData
                 ? request.data
                 : JSON.stringify(request.data),
-          }).then(handleResponse);
+          }).then(this.handleResponse.bind(this));
           break;
       }
 
@@ -107,41 +124,44 @@ class ApyClient {
       this.startRateLimiter();
     }
   }
+
+  private async handleResponse(response: Response): Promise<any> {
+    if (this.debug) {
+      console.log(response);
+    }
+    if (!response.ok) {
+      const error = await response.text();
+      const errorCode = response.status;
+      throw new Error(`${errorCode}: ${error}`);
+    }
+    const contentType = response.headers.get("Content-Type") ?? "";
+    const blobTypes = new Set([
+      "image/png",
+      "image/jpeg",
+      "application/zip",
+      "application/pdf",
+    ]);
+
+    const handleBlob = async (responseData: Response): Promise<Blob> =>
+      await responseData.blob();
+    const handleText = async (
+      responseData: Response
+    ): Promise<string | undefined> => await responseData.text();
+    const handleJson = async (
+      responseData: Response
+    ): Promise<Record<string, any> | undefined> => await responseData.json();
+
+    switch (true) {
+      case contentType.includes("text/plain"):
+      case contentType.includes("text/html"):
+        return await handleText(response);
+      default:
+        return blobTypes.has(contentType)
+          ? await handleBlob(response)
+          : await handleJson(response);
+    }
+  }
 }
-
-const handleResponse = async (response: Response): Promise<any> => {
-  if (!response.ok) {
-    const error = await response.text();
-    const errorCode = response.status;
-    throw new Error(`${errorCode}: ${error}`);
-  }
-  const contentType = response.headers.get("Content-Type") ?? "";
-  const blobTypes = new Set([
-    "image/png",
-    "image/jpeg",
-    "application/zip",
-    "application/pdf",
-  ]);
-
-  const handleBlob = async (responseData: Response): Promise<Blob> =>
-    await responseData.blob();
-  const handleText = async (
-    responseData: Response
-  ): Promise<string | undefined> => await responseData.text();
-  const handleJson = async (
-    responseData: Response
-  ): Promise<Record<string, any> | undefined> => await responseData.json();
-
-  switch (true) {
-    case contentType.includes("text/plain"):
-    case contentType.includes("text/html"):
-      return await handleText(response);
-    default:
-      return blobTypes.has(contentType)
-        ? await handleBlob(response)
-        : await handleJson(response);
-  }
-};
 
 let instance: ApyClient | null = null;
 
@@ -149,6 +169,7 @@ function getInstance(
   apyToken?: string,
   options?: {
     rateLimit: number;
+    debug: boolean;
   }
 ): ApyClient {
   if (!instance) {
@@ -170,6 +191,7 @@ function initApyhub(
   apyToken: string,
   options?: {
     rateLimit: number;
+    debug: boolean;
   }
 ): void {
   getInstance(apyToken, options);
