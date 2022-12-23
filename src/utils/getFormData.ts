@@ -1,6 +1,7 @@
 import * as fs from "fs";
 import * as path from "path";
 import FormData from "form-data";
+import { getFileExtension } from "./getFileExtension";
 
 export function getFormData(
   file: string | Buffer | (string | Buffer)[],
@@ -21,7 +22,7 @@ export function getFormData(
     } else {
       formData.append(fieldName, f, {
         contentType: "application/octet-stream",
-        filename: "file",
+        filename: `file.${getFileExtension(f)}`,
       });
     }
   }
