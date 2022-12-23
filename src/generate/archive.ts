@@ -21,7 +21,7 @@ async function archive({
 }: {
   responseFormat: "url" | "file";
   output?: string;
-  input: string[];
+  input: string[] | Buffer[];
   password?: string;
 }): Promise<{ data: string }> {
   const client = getInstance();

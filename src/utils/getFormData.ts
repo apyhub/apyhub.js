@@ -3,22 +3,27 @@ import * as path from "path";
 import FormData from "form-data";
 
 export function getFormData(
-  file: string | Buffer,
+  file: string | Buffer | (string | Buffer)[],
   fieldName: string
 ): FormData {
   const formData = new FormData();
-  if (typeof file === "string") {
-    const absoluteFilePath = path.resolve(file);
-    const fileBuffer = fs.readFileSync(absoluteFilePath);
-    formData.append(fieldName, fileBuffer, {
-      contentType: "application/octet-stream",
-      filename: path.basename(absoluteFilePath),
-    });
-  } else {
-    formData.append(fieldName, file, {
-      contentType: "application/octet-stream",
-      filename: "file",
-    });
+  if (typeof file === "string" || file instanceof Buffer) {
+    file = [file];
+  }
+  for (const f of file) {
+    if (typeof f === "string") {
+      const absoluteFilePath = path.resolve(f);
+      const fileBuffer = fs.readFileSync(absoluteFilePath);
+      formData.append(fieldName, fileBuffer, {
+        contentType: "application/octet-stream",
+        filename: path.basename(absoluteFilePath),
+      });
+    } else {
+      formData.append(fieldName, f, {
+        contentType: "application/octet-stream",
+        filename: "file",
+      });
+    }
   }
   return formData;
 }
