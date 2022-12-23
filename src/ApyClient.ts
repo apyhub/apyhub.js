@@ -181,7 +181,7 @@ let instance: ApyClient | null = null;
 
 // getInstance with ApyClientParams
 function getInstance(
-  apyToken:
+  apyToken?:
     | string
     | {
         username: string;
