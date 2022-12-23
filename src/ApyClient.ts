@@ -12,12 +12,26 @@ class ApyClient {
   protected debug: boolean;
 
   constructor(
-    apyToken: string,
+    apyToken:
+      | string
+      | {
+          username: string;
+          password: string;
+        },
     options?: { rateLimit: number; debug: boolean }
   ) {
-    this.headers = {
-      "apy-token": apyToken,
-    };
+    this.headers =
+      apyToken === "string"
+        ? {
+            "apy-token": apyToken,
+          }
+        : typeof apyToken === "object" &&
+          apyToken.username &&
+          apyToken.password && {
+            Authorization: `Basic ${Buffer.from(
+              `${apyToken.username}:${apyToken.password}`
+            ).toString("base64")}`,
+          };
     this.debug = options?.debug ?? false;
     this.requestQueue = [];
     this.rateLimit = options?.rateLimit ?? 1;
@@ -41,12 +55,12 @@ class ApyClient {
     data?: any,
     options: any = {}
   ): Promise<any> {
-    if (!this.headers["apy-token"]) {
-      throw new Error("apy-token is required");
+    console.log(this.headers);
+    if (!this.headers["apy-token"] && !this.headers["Authorization"]) {
+      throw new Error("Basic Authorization or Token is required");
     }
     const headers = { ...this.headers, ...options.headers };
 
-    console.log(this.debug);
     if (this.debug) {
       this.debugRequest(method, url, data);
     }
@@ -165,8 +179,14 @@ class ApyClient {
 
 let instance: ApyClient | null = null;
 
+// getInstance with ApyClientParams
 function getInstance(
-  apyToken?: string,
+  apyToken:
+    | string
+    | {
+        username: string;
+        password: string;
+      },
   options?: {
     rateLimit: number;
     debug: boolean;
@@ -174,7 +194,7 @@ function getInstance(
 ): ApyClient {
   if (!instance) {
     if (!apyToken) {
-      throw new Error("apyToken is required");
+      throw new Error("Basic Authorization or Token is required");
     }
     instance = new ApyClient(apyToken, options);
   }
@@ -183,12 +203,17 @@ function getInstance(
 
 /**
  * Initializes the Apyhub API client.
- * @param {string} apyToken - The Apyhub API token.
+ * @param {string} apyToken - The Apyhub API token or Basic Authorization credentials.
  * @param {Object} [options] - Options for the API client.
  * @param {number} [options.rateLimit] - The rate limit for the API client.
  */
 function initApyhub(
-  apyToken: string,
+  apyToken:
+    | string
+    | {
+        username: string;
+        password: string;
+      },
   options?: {
     rateLimit: number;
     debug: boolean;

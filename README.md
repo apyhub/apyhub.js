@@ -30,12 +30,25 @@ npm install apyhub
 
 ## **Usage**
 
-To use the library, you will need to initialize it with your ApyHub API token. You can do this by importing the **`initApyhub`** function and calling it with your token as an argument:
+To use the library, you will need to initialize it with your ApyHub API token or Basic Authorization.
+
+Token
 
 ```jsx
 import { initApyhub } from "apyhub";
 
 initApyhub("YOUR_APY_TOKEN");
+```
+
+Basic Authorization
+
+```jsx
+import { initApyhub } from "apyhub";
+
+initApyhub({
+  username: "YOUR_AUTH_USERNAME",
+  password: "YOUR_AUTH_PASSWORD",
+});
 ```
 
 Once the library is initialized, you can import and use the various functions and methods provided by the library. For example, to access the data list of countries, you can do the following:
