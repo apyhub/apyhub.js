@@ -1,5 +1,6 @@
 import { getInstance } from "../ApyClient";
 import { checkMissingParams } from "../utils/checkMissingParams";
+import { checkParamTypes } from "../utils/checkParamsTypes";
 /**
 
 Generates an iCalendar file or URL
@@ -55,6 +56,7 @@ async function ical({
 }): Promise<{ data: string }> {
   const client = getInstance();
   checkMissingParams({
+    responseFormat,
     summary,
     description,
     organizerEmail,
@@ -65,6 +67,7 @@ async function ical({
     meetingDate,
     recurring,
   });
+  checkParamTypes({ responseFormat }, ["file", "url"]);
 
   const url = `https://api.apyhub.com/generate/ical/${responseFormat}?output=${output ??
     "invite.ics"}`;
