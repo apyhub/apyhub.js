@@ -10,7 +10,7 @@ To learn more about ApyHub, visit our website at **[apyhub.com](https://www.apyh
 
 Our SDK provides access to the following API categories:
 
-- Convert API
+- [Convert API](https://github.com/apyhub/apyhub.js/tree/main/src/convert#README.md)
 - Data API
 - Extract API
 - Generate API
