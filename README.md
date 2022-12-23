@@ -1,103 +1,59 @@
-# TSDX User Guide
+# ApyHub SDK for Node.js
 
-Congrats! You just saved yourself hours of work by bootstrapping this project with TSDX. Let’s get you oriented with what’s here and how to use it.
+Welcome to the ApyHub SDK for Node.js! This library provides easy access to the ApyHub APIs through a set of simple and powerful functions.
 
-> This TSDX setup is meant for developing libraries (not apps!) that can be published to NPM. If you’re looking to build a Node app, you could use `ts-node-dev`, plain `ts-node`, or simple `tsc`.
+With this SDK, you can easily perform tasks such as file conversion, text and metadata extraction, document and image generation, image processing, and access to data lists and currency conversion. As our platform grows and develops new APIs, we will be adding more functions to this library.
 
-> If you’re new to TypeScript, checkout [this handy cheatsheet](https://devhints.io/typescript)
+To learn more about ApyHub, visit our website at **[apyhub.com](https://www.apyhub.com/)** or join our Discord server at [**discord.com/invite/apyhub**](https://discord.gg/JZagJJcw6F).
 
-## Commands
+## **API Documentation**
 
-TSDX scaffolds your new library inside `/src`.
+Our SDK provides access to the following API categories:
 
-To run TSDX, use:
+- [Convert API](https://github.com/apyhub/apyhub.js/tree/main/src/convert#README.md)
+- Data API
+- Extract API
+- Generate API
+- Image Processing API
+- Validate
+- Search
+
+Each of these categories contains multiple functions for interacting with the corresponding API. For more examples and detailed API documentation, see the links above.
+
+## **Installation**
+
+To use this library, you will need to have Node.js and npm installed on your machine. Then, you can install the ApyHub SDK by running the following command:
 
 ```bash
-npm start # or yarn start
+npm install apyhub
 ```
 
-This builds to `/dist` and runs the project in watch mode so any edits you save inside `src` causes a rebuild to `/dist`.
+## **Usage**
 
-To do a one-off build, use `npm run build` or `yarn build`.
+To use the library, you will need to initialize it with your ApyHub API token. You can do this by importing the **`initApyhub`** function and calling it with your token as an argument:
 
-To run tests, use `npm test` or `yarn test`.
+```jsx
+import { initApyhub } from 'apyhub';
 
-## Configuration
-
-Code quality is set up for you with `prettier`, `husky`, and `lint-staged`. Adjust the respective fields in `package.json` accordingly.
-
-### Jest
-
-Jest tests are set up to run with `npm test` or `yarn test`.
-
-### Bundle Analysis
-
-[`size-limit`](https://github.com/ai/size-limit) is set up to calculate the real cost of your library with `npm run size` and visualize the bundle with `npm run analyze`.
-
-#### Setup Files
-
-This is the folder structure we set up for you:
-
-```txt
-/src
-  index.tsx       # EDIT THIS
-/test
-  blah.test.tsx   # EDIT THIS
-.gitignore
-package.json
-README.md         # EDIT THIS
-tsconfig.json
+initApyhub('YOUR_APY_TOKEN');
 ```
 
-### Rollup
+Once the library is initialized, you can import and use the various functions and methods provided by the library. For example, to access the data list of countries, you can do the following:
 
-TSDX uses [Rollup](https://rollupjs.org) as a bundler and generates multiple rollup configs for various module formats and build settings. See [Optimizations](#optimizations) for details.
+```jsx
+import { data } from 'apyhub';
 
-### TypeScript
-
-`tsconfig.json` is set up to interpret `dom` and `esnext` types, as well as `react` for `jsx`. Adjust according to your needs.
-
-## Continuous Integration
-
-### GitHub Actions
-
-Two actions are added by default:
-
-- `main` which installs deps w/ cache, lints, tests, and builds on all pushes against a Node and OS matrix
-- `size` which comments cost comparison of your library on every pull request using [`size-limit`](https://github.com/ai/size-limit)
-
-## Optimizations
-
-Please see the main `tsdx` [optimizations docs](https://github.com/palmerhq/tsdx#optimizations). In particular, know that you can take advantage of development-only optimizations:
-
-```js
-// ./types/index.d.ts
-declare var __DEV__: boolean;
-
-// inside your code...
-if (__DEV__) {
-  console.log('foo');
-}
+const countries = await data.countries();
 ```
 
-You can also choose to install and use [invariant](https://github.com/palmerhq/tsdx#invariant) and [warning](https://github.com/palmerhq/tsdx#warning) functions.
+For more examples, see the **[API documentation](https://docs.apyhub.com/)**.
 
-## Module Formats
+## **Contributing**
 
-CJS, ESModules, and UMD module formats are supported.
+We welcome contributions to this project. If you have an idea for a new feature or improvement, please open an issue to discuss it. If you'd like to contribute code, please follow these steps:
 
-The appropriate paths are configured in `package.json` and `dist/index.js` accordingly. Please report if any issues are found.
-
-## Named Exports
-
-Per Palmer Group guidelines, [always use named exports.](https://github.com/palmerhq/typescript#exports) Code split inside your React app instead of your React library.
-
-## Including Styles
-
-There are many ways to ship styles, including with CSS-in-JS. TSDX has no opinion on this, configure how you like.
-
-For vanilla CSS, you can include it at the root directory and add it to the `files` section in your `package.json`, so that it can be imported separately by your users and run through their bundler's loader.
-
-## Publishing to NPM
-
-We recommend using [np](https://github.com/sindresorhus/np).
+1. Fork the repository.
+2. Create a new branch for your changes.
+3. Make your changes and commit them.
+4. Push your branch to your fork on GitHub.
+5. Open a pull request from your branch to the **`main`** branch of this repository.
