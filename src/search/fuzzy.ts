@@ -13,13 +13,18 @@ async function fuzzy({
   target,
   unicodeNormalized = false,
 }: {
-  source?: string;
-  target?: string;
+  source: string;
+  target: string;
   unicodeNormalized?: boolean;
-}): Promise<{ data: string } | undefined> {
+}): Promise<{ data: string[] } | undefined> {
   const client = getInstance();
 
   const requestUrl = `https://api.apyhub.com/search/text/fuzzy?unicode-normalized=${unicodeNormalized.toString()}`;
+
+  // return empty array if source or target is empty string
+  if (!source || !target) {
+    return { data: [] };
+  }
 
   return await client.request(
     "post",
