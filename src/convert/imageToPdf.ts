@@ -8,7 +8,7 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Converts an image file or URL to a PDF file.
  * @param {Object} params - The parameters for the conversion.
- * @param {string } params.input - The input image file or URL.
+ * @param {string | Buffer} params.input - The image file or URL.
  * @param {"url" | "file"} params.responseFormat - The format for the response.
  * @param {string} [params.output] - The name for the output PDF file.
  * @returns {Promise<{data: string} | undefined>} A promise that resolves to the data for the output file or `undefined` if the response format is not "url".
@@ -18,7 +18,7 @@ async function imageToPdf({
   responseFormat,
   output,
 }: {
-  input: string;
+  input: string | Buffer;
   responseFormat: "url" | "file";
   output?: string;
 }): Promise<{ data: string } | undefined> {

@@ -6,10 +6,10 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Extracts text from a Word document.
  *
- * @param {string } word - The Word document file or URL.
+ * @param {string | Buffer} word - The Word document file or URL.
  * @returns {Promise<{data: string}>} A promise that resolves to the text for the Word document.
  */
-async function textFromWord(word: string): Promise<{ data: string }> {
+async function textFromWord(word: string | Buffer): Promise<{ data: string }> {
   const client = getInstance();
   checkMissingParams({ word });
 

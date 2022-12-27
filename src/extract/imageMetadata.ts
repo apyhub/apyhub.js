@@ -6,10 +6,12 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Extracts metadata from an image.
  *
- * @param {string | File | Blob} image - The image file or URL.
+ * @param {string | Buffer} image - The image file or URL.
  * @returns {Promise<{data: string}>} A promise that resolves to the metadata for the image.
  */
-async function imageMetadata(image: string): Promise<{ data: string }> {
+async function imageMetadata(
+  image: string | Buffer
+): Promise<{ data: string }> {
   const client = getInstance();
   checkMissingParams({ image });
 

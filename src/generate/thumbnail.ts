@@ -8,7 +8,7 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 Generates a thumbnail image from the given input and returns the thumbnail in the specified format.
 @param {Object} options - The options object.
-@param {(string)} options.input - The input image. This can be either a file path or a Buffer containing the image file.
+@param {(string|Buffer)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
 @param {"url"|"file"} options.responseFormat - The format in which the thumbnail should be returned. Valid values are "url" or "file".
 @param {string} [options.output] - The file path where the thumbnail should be saved. This parameter is only used if responseFormat is "file".
 @param {number} options.width - The desired width of the thumbnail image.
@@ -22,7 +22,7 @@ async function thumbnail({
   width,
   height,
 }: {
-  input: string;
+  input: string | Buffer;
   responseFormat: "url" | "file";
   output?: string;
   width: number;

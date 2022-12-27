@@ -27,7 +27,7 @@ Converts a CSV file or URL to an Excel file.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The input CSV file or URL. |
+| `params.input` | `string` \| `Buffer` | The CSV file or URL. |
 | `params.output?` | `string` | The name for the output Excel file. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The format for the response. |
 
@@ -39,7 +39,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/csvToExcel.ts:16](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/csvToExcel.ts#L16)
+[convert/csvToExcel.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/csvToExcel.ts#L16)
 
 ___
 
@@ -54,7 +54,7 @@ Converts an HTML file or URL to a PDF file.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The input HTML file or URL. |
+| `params.input` | `string` \| `Buffer` | The HTML file or URL. |
 | `params.output?` | `string` | The name for the output PDF file. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The format for the response. |
 
@@ -66,7 +66,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/htmlToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/htmlToPdf.ts#L16)
+[convert/htmlToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/htmlToPdf.ts#L16)
 
 ___
 
@@ -81,7 +81,7 @@ Converts an image file or URL to a PDF file.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The input image file or URL. |
+| `params.input` | `string` \| `Buffer` | The image file or URL. |
 | `params.output?` | `string` | The name for the output PDF file. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The format for the response. |
 
@@ -93,7 +93,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/imageToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/imageToPdf.ts#L16)
+[convert/imageToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/imageToPdf.ts#L16)
 
 ___
 
@@ -110,7 +110,7 @@ This function converts the given markdown input to HTML and returns the result.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The markdown input. Can be a file or URL. |
+| `params.input` | `string` \| `Buffer` | The markdown input. |
 | `params.output?` | `string` | The name of the output file. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The format of the response. Can be "url" or "file". |
 
@@ -122,7 +122,7 @@ This function converts the given markdown input to HTML and returns the result.
 
 #### Defined in
 
-[convert/markdownToHtml.ts:19](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/markdownToHtml.ts#L19)
+[convert/markdownToHtml.ts:19](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/markdownToHtml.ts#L19)
 
 ___
 
@@ -139,7 +139,7 @@ This function converts the given presentation input to PDF and returns the resul
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The presentation input. Can be a file or URL. |
+| `params.input` | `string` \| `Buffer` | The presentation input. |
 | `params.output?` | `string` | The name of the output file. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The format of the response. Can be "url" or "file". |
 
@@ -151,7 +151,7 @@ This function converts the given presentation input to PDF and returns the resul
 
 #### Defined in
 
-[convert/presentationToPdf.ts:19](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/presentationToPdf.ts#L19)
+[convert/presentationToPdf.ts:19](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/presentationToPdf.ts#L19)
 
 ___
 
@@ -166,7 +166,7 @@ Converts a spreadsheet file or URL to a PDF file.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The file or URL to convert. |
+| `params.input` | `string` \| `Buffer` | The file or URL to convert. |
 | `params.output?` | `string` | The desired file name for the output PDF. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. |
 
@@ -178,7 +178,7 @@ Converts a spreadsheet file or URL to a PDF file.
 
 #### Defined in
 
-[convert/spreadsheetToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/spreadsheetToPdf.ts#L16)
+[convert/spreadsheetToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/spreadsheetToPdf.ts#L16)
 
 ___
 
@@ -193,7 +193,7 @@ Converts a Word file or URL to a PDF file.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the conversion. |
-| `params.input` | `string` | The file or URL to convert. |
+| `params.input` | `string` \| `Buffer` | The file or URL to convert. |
 | `params.output?` | `string` | The desired file name for the output PDF. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. |
 
@@ -205,4 +205,4 @@ Converts a Word file or URL to a PDF file.
 
 #### Defined in
 
-[convert/wordToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/2905159/src/convert/wordToPdf.ts#L16)
+[convert/wordToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/wordToPdf.ts#L16)

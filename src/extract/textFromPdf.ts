@@ -6,10 +6,10 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Extracts text from a PDF file.
  *
- * @param {string} pdf - The PDF file or URL.
+ * @param {string | Buffer} pdf - The PDF file or URL.
  * @returns {Promise<{data: string}>} A promise that resolves to the text for the PDF.
  */
-async function textFromPdf(pdf: string): Promise<{ data: string }> {
+async function textFromPdf(pdf: string | Buffer): Promise<{ data: string }> {
   const client = getInstance();
   checkMissingParams({ pdf });
 

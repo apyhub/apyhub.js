@@ -28,7 +28,7 @@ Creates an archive file (zip) from a list of files or URLs.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `params` | `Object` | The parameters for the archive creation. |
-| `params.input` | `string`[] \| `Buffer`[] | The list of files or URLs to include in the archive. |
+| `params.input` | `string`[] \| `Buffer`[] | The list of files or URLs to archive. |
 | `params.output?` | `string` | The desired file name for the output archive. |
 | `params.password?` | `string` | The password to use for secure archiving. |
 | `params.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. |
@@ -41,7 +41,7 @@ Creates an archive file (zip) from a list of files or URLs.
 
 #### Defined in
 
-[generate/archive.ts:16](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/archive.ts#L16)
+[generate/archive.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/archive.ts#L16)
 
 ___
 
@@ -68,7 +68,7 @@ Generates a barcode image from a string of up to 80 characters.
 
 #### Defined in
 
-[generate/barcode.ts:13](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/barcode.ts#L13)
+[generate/barcode.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/barcode.ts#L13)
 
 ___
 
@@ -122,7 +122,7 @@ A promise that resolves with the chart data if successful.
 
 #### Defined in
 
-[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/charts.ts#L37)
+[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/charts.ts#L37)
 
 ___
 
@@ -161,7 +161,7 @@ A promise that resolves to an object with the data - either the file or URL depe
 
 #### Defined in
 
-[generate/ical.ts:25](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/ical.ts#L25)
+[generate/ical.ts:25](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/ical.ts#L25)
 
 ___
 
@@ -188,7 +188,7 @@ Generates a PDF file from an HTML string or URL.
 
 #### Defined in
 
-[generate/pdf.ts:13](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/pdf.ts#L13)
+[generate/pdf.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/pdf.ts#L13)
 
 ___
 
@@ -215,7 +215,7 @@ Generates a QR code image from a string.
 
 #### Defined in
 
-[generate/qr.ts:13](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/qr.ts#L13)
+[generate/qr.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/qr.ts#L13)
 
 ___
 
@@ -244,7 +244,7 @@ Takes a screenshot of a webpage.
 
 #### Defined in
 
-[generate/screenshot.ts:15](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/screenshot.ts#L15)
+[generate/screenshot.ts:15](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/screenshot.ts#L15)
 
 ___
 
@@ -260,7 +260,7 @@ Generates a thumbnail image from the given input and returns the thumbnail in th
 | :------ | :------ | :------ |
 | `options` | `Object` | The options object. |
 | `options.height` | `number` | The desired height of the thumbnail image. |
-| `options.input` | `string` | The input image. This can be either a file path or a Buffer containing the image file. |
+| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
 | `options.output?` | `string` | The file path where the thumbnail should be saved. This parameter is only used if responseFormat is "file". |
 | `options.responseFormat` | ``"file"`` \| ``"url"`` | The format in which the thumbnail should be returned. Valid values are "url" or "file". |
 | `options.width` | `number` | The desired width of the thumbnail image. |
@@ -273,4 +273,4 @@ A promise that resolves with the thumbnail data if successful, or undefined if a
 
 #### Defined in
 
-[generate/thumbnail.ts:18](https://github.com/apyhub/apyhub.js/blob/2905159/src/generate/thumbnail.ts#L18)
+[generate/thumbnail.ts:18](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/thumbnail.ts#L18)

@@ -23,7 +23,7 @@ Extracts metadata from an image.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `image` | `string` | The image file or URL. |
+| `image` | `string` \| `Buffer` | The image file or URL. |
 
 #### Returns
 
@@ -33,7 +33,7 @@ A promise that resolves to the metadata for the image.
 
 #### Defined in
 
-[extract/imageMetadata.ts:12](https://github.com/apyhub/apyhub.js/blob/2905159/src/extract/imageMetadata.ts#L12)
+[extract/imageMetadata.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/imageMetadata.ts#L12)
 
 ___
 
@@ -47,7 +47,7 @@ Extracts text from a PDF file.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `pdf` | `string` | The PDF file or URL. |
+| `pdf` | `string` \| `Buffer` | The PDF file or URL. |
 
 #### Returns
 
@@ -57,7 +57,7 @@ A promise that resolves to the text for the PDF.
 
 #### Defined in
 
-[extract/textFromPdf.ts:12](https://github.com/apyhub/apyhub.js/blob/2905159/src/extract/textFromPdf.ts#L12)
+[extract/textFromPdf.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/textFromPdf.ts#L12)
 
 ___
 
@@ -81,7 +81,7 @@ A promise that resolves to the text for the webpage.
 
 #### Defined in
 
-[extract/textFromWebpage.ts:10](https://github.com/apyhub/apyhub.js/blob/2905159/src/extract/textFromWebpage.ts#L10)
+[extract/textFromWebpage.ts:10](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/textFromWebpage.ts#L10)
 
 ___
 
@@ -95,7 +95,7 @@ Extracts text from a Word document.
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `word` | `string` | The Word document file or URL. |
+| `word` | `string` \| `Buffer` | The Word document file or URL. |
 
 #### Returns
 
@@ -105,4 +105,4 @@ A promise that resolves to the text for the Word document.
 
 #### Defined in
 
-[extract/textFromWord.ts:12](https://github.com/apyhub/apyhub.js/blob/2905159/src/extract/textFromWord.ts#L12)
+[extract/textFromWord.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/textFromWord.ts#L12)

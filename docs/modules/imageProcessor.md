@@ -24,7 +24,7 @@ Compresses an image.
 | Name | Type | Description |
 | :------ | :------ | :------ |
 | `options` | `Object` | The options for the function. |
-| `options.input` | `string` | The input image as a file path or URL, or as a Buffer if it is a file. |
+| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
 | `options.output?` | `string` | The desired file name for the output image. Default is "output.png". |
 | `options.quality` | `number` | The desired quality of the output image. Must be a number between 1 and 99. |
 | `options.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. Can be either "url" or "file". |
@@ -37,7 +37,7 @@ Compresses an image.
 
 #### Defined in
 
-[imageProcessor/compress.ts:18](https://github.com/apyhub/apyhub.js/blob/2905159/src/imageProcessor/compress.ts#L18)
+[imageProcessor/compress.ts:18](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/compress.ts#L18)
 
 ___
 
@@ -53,7 +53,7 @@ Crops an image.
 | :------ | :------ | :------ |
 | `options` | `Object` | The options for the function. |
 | `options.height` | `number` | The desired height of the output image. |
-| `options.input` | `string` | The input image as a file path or URL, or as a Buffer if it is a file. |
+| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
 | `options.output?` | `string` | The desired file name for the output image. Default is "output.png". |
 | `options.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. Can be either "url" or "file". |
 | `options.width` | `number` | The desired width of the output image. |
@@ -66,7 +66,7 @@ Crops an image.
 
 #### Defined in
 
-[imageProcessor/crop.ts:20](https://github.com/apyhub/apyhub.js/blob/2905159/src/imageProcessor/crop.ts#L20)
+[imageProcessor/crop.ts:20](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/crop.ts#L20)
 
 ___
 
@@ -88,7 +88,7 @@ Resizes an image.
 | :------ | :------ | :------ |
 | `options` | `Object` | The options for the function. |
 | `options.height` | `number` | The desired height of the output image. |
-| `options.input` | `string` | The input image as a file path or URL, or as a Buffer if it is a file. |
+| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
 | `options.output?` | `string` | The desired file name for the output image. Default is "output.png". |
 | `options.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. Can be either "url" or "file". |
 | `options.width` | `number` | The desired width of the output image. |
@@ -101,7 +101,7 @@ Resizes an image.
 
 #### Defined in
 
-[imageProcessor/resize.ts:21](https://github.com/apyhub/apyhub.js/blob/2905159/src/imageProcessor/resize.ts#L21)
+[imageProcessor/resize.ts:21](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/resize.ts#L21)
 
 ___
 
@@ -129,4 +129,4 @@ Adds a watermark to an image.
 
 #### Defined in
 
-[imageProcessor/watermark.ts:20](https://github.com/apyhub/apyhub.js/blob/2905159/src/imageProcessor/watermark.ts#L20)
+[imageProcessor/watermark.ts:20](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/watermark.ts#L20)

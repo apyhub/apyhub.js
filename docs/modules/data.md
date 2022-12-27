@@ -28,7 +28,7 @@ Retrieves a list of countries and their associated data.
 
 #### Defined in
 
-[data/countries.ts:7](https://github.com/apyhub/apyhub.js/blob/2905159/src/data/countries.ts#L7)
+[data/countries.ts:7](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/data/countries.ts#L7)
 
 ___
 
@@ -52,7 +52,7 @@ Retrieves information about a specific country.
 
 #### Defined in
 
-[data/country.ts:8](https://github.com/apyhub/apyhub.js/blob/2905159/src/data/country.ts#L8)
+[data/country.ts:8](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/data/country.ts#L8)
 
 ___
 
@@ -79,7 +79,7 @@ Converts an amount in one currency to another.
 
 #### Defined in
 
-[data/currencyConverter.ts:12](https://github.com/apyhub/apyhub.js/blob/2905159/src/data/currencyConverter.ts#L12)
+[data/currencyConverter.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/data/currencyConverter.ts#L12)
 
 ___
 
@@ -97,7 +97,7 @@ Retrieves a list of currencies and their associated data.
 
 #### Defined in
 
-[data/currencyList.ts:7](https://github.com/apyhub/apyhub.js/blob/2905159/src/data/currencyList.ts#L7)
+[data/currencyList.ts:7](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/data/currencyList.ts#L7)
 
 ___
 
@@ -115,4 +115,4 @@ Retrieves a list of timezones and their associated data.
 
 #### Defined in
 
-[data/timezones.ts:7](https://github.com/apyhub/apyhub.js/blob/2905159/src/data/timezones.ts#L7)
+[data/timezones.ts:7](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/data/timezones.ts#L7)

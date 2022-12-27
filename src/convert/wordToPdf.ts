@@ -8,7 +8,7 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Converts a Word file or URL to a PDF file.
  * @param {Object} params - The parameters for the conversion.
- * @param {(string)} params.input - The file or URL to convert.
+ * @param {string | Buffer} params.input - The file or URL to convert.
  * @param {"url"|"file"} params.responseFormat - The desired response format.
  * @param {string} [params.output] - The desired file name for the output PDF.
  * @return {Promise<{data: string}|undefined>} - A promise that resolves with the resulting PDF file or URL as a string, or undefined if the conversion failed.
@@ -18,7 +18,7 @@ async function wordToPdf({
   responseFormat,
   output,
 }: {
-  input: string;
+  input: string | Buffer;
   responseFormat: "url" | "file";
   output?: string;
 }): Promise<{ data: string } | undefined> {

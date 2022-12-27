@@ -34,7 +34,7 @@ Validates an email address.
 
 #### Defined in
 
-[validate/email.ts:12](https://github.com/apyhub/apyhub.js/blob/2905159/src/validate/email.ts#L12)
+[validate/email.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/validate/email.ts#L12)
 
 ___
 
@@ -60,7 +60,7 @@ Validates a postcode.
 
 #### Defined in
 
-[validate/postcode.ts:13](https://github.com/apyhub/apyhub.js/blob/2905159/src/validate/postcode.ts#L13)
+[validate/postcode.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/validate/postcode.ts#L13)
 
 ___
 
@@ -84,4 +84,4 @@ Validates a VAT number.
 
 #### Defined in
 
-[validate/vat.ts:12](https://github.com/apyhub/apyhub.js/blob/2905159/src/validate/vat.ts#L12)
+[validate/vat.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/validate/vat.ts#L12)
