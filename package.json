@@ -1,5 +1,6 @@
 {
   "version": "0.1.8",
+  "repository": "https://github.com/apyhub/apyhub.js",
   "license": "MIT",
   "main": "dist/index.js",
   "typings": "dist/index.d.ts",
