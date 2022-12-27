@@ -24,7 +24,8 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *   const response = await convert.presentationToPdf({
  *     input: "https://example.com/presentation.pptx",
  *     responseFormat: "url",
- *
+ *    });
+ * };
  */
 async function presentationToPdf({
   input,

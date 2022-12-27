@@ -21,7 +21,7 @@ class ApyClient {
     options?: { rateLimit: number; debug: boolean }
   ) {
     this.headers =
-      apyToken === "string"
+      typeof apyToken === "string"
         ? {
             "apy-token": apyToken,
           }
