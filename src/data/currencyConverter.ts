@@ -8,6 +8,18 @@ import { checkMissingParams } from "../utils/checkMissingParams";
  * @param {string} params.target - The target currency.
  * @param {string} [params.date] - The date for the conversion (in the format "YYYY-MM-DD"). If not provided, the current date is used.
  * @return {Promise<{data: number}>} - A promise that resolves with an object containing the converted amount.
+ *
+ * @example
+ *
+ * import { data } from "apy-client";
+ *
+ * const currencyConverter = async () => {
+ *   const response = await data.currencyConverter({
+ *     source: "USD",
+ *     target: "EUR",
+ *     date: "2021-01-01",
+ *   });
+ * };
  */
 async function currencyConverter({
   source,

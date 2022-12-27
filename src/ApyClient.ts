@@ -55,7 +55,6 @@ class ApyClient {
     data?: any,
     options: any = {}
   ): Promise<any> {
-    console.log(this.headers);
     if (!this.headers["apy-token"] && !this.headers["Authorization"]) {
       throw new Error("Basic Authorization or Token is required");
     }
