@@ -9,6 +9,18 @@ import { checkParamTypes } from "../utils/checkParamsTypes";
  * @param {"file"|"url"} params.responseFormat - The desired response format.
  * @param {string} [params.output] - The desired file name for the output barcode image.
  * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting barcode image file or URL as a string.
+ *
+ * @example
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const barcode = async () => {
+ *   const data = await generate.barcode({
+ *     responseFormat: "url",
+ *     input: "https://apyhub.com",
+ *   });
+ *   return data;
+ * };
  */
 async function barcode({
   input,

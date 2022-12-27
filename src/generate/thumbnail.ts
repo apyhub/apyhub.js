@@ -5,16 +5,30 @@ import { getFormData } from "../utils/getFormData";
 import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 /**
-
-Generates a thumbnail image from the given input and returns the thumbnail in the specified format.
-@param {Object} options - The options object.
-@param {(string|Buffer)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
-@param {"url"|"file"} options.responseFormat - The format in which the thumbnail should be returned. Valid values are "url" or "file".
-@param {string} [options.output] - The file path where the thumbnail should be saved. This parameter is only used if responseFormat is "file".
-@param {number} options.width - The desired width of the thumbnail image.
-@param {number} options.height - The desired height of the thumbnail image.
-@returns {Promise<{data: string}|undefined>} A promise that resolves with the thumbnail data if successful, or undefined if an error occurred.
-*/
+ * Creates a thumbnail image from a file or URL.
+ *
+ * @param {Object} params - The parameters for the thumbnail creation.
+ * @param {"url"|"file"} params.responseFormat - The desired response format.
+ * @param {string} [params.output] - The desired file name for the output thumbnail.
+ * @param {string|Buffer} params.input - The file or URL to create a thumbnail from.
+ * @param {number} params.width - The desired width of the thumbnail.
+ * @param {number} params.height - The desired height of the thumbnail.
+ * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting thumbnail file or URL as a string.
+ *
+ * @example
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const thumbnail = async () => {
+ *   const data = await generate.thumbnail({
+ *     responseFormat: "url",
+ *     input: "https://assets.apyhub.com/samples/sample.pdf",
+ *     width: 200,
+ *     height: 200,
+ *   });
+ *  return data;
+ * };
+ */
 async function thumbnail({
   input,
   responseFormat,

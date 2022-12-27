@@ -9,6 +9,19 @@ import { checkParamTypes } from "../utils/checkParamsTypes";
  * @param {"url"|"file"} params.responseFormat - The desired response format.
  * @param {boolean} [params.landscape] - Whether to generate the PDF in landscape orientation.
  * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting PDF file or URL as a string.
+ *
+ * @example
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const pdf = async () => {
+ *   const data = await generate.pdf({
+ *     responseFormat: "url",
+ *     input: "https://apyhub.com",
+ *     landscape: true,
+ *   });
+ *   return data;
+ * };
  */
 async function pdf({
   input,

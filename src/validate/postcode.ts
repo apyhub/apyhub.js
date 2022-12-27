@@ -9,6 +9,18 @@ import { checkParamTypes } from "../utils/checkParamsTypes";
  * @param {string} options.postcode - The postcode to validate.
  * @param {"in"|"uk"} options.countryCode - The country code of the postcode. Can be either "in" or "uk".
  * @returns {Promise<{data: boolean}>} - A promise that resolves to an object with the validation result.
+ *
+ * @example
+ *
+ * const { validate } = require("apyhub");
+ *
+ * const validatePostcode = async () => {
+ *   const data = await validate.postcode({
+ *     postcode: "560037",
+ *     countryCode: "in"
+ *   });
+ *   return data;
+ * };
  */
 async function postcode({
   postcode,

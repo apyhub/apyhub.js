@@ -20,6 +20,17 @@
 
 Retrieves a list of countries and their associated data.
 
+**`Example`**
+
+```ts
+import { data } from "apyhub";
+
+const countries = async () => {
+  const data = await data.countries();
+   return data;
+}
+```
+
 #### Returns
 
 `Promise`<{ `calling_codes`: `number`[] ; `cca3`: `string` ; `emoji`: `string` ; `key`: `string` ; `value`: `string`  }[]\>
@@ -28,7 +39,7 @@ Retrieves a list of countries and their associated data.
 
 #### Defined in
 
-[data/countries.ts:7](https://github.com/apyhub/apyhub.js/blob/63910fc/src/data/countries.ts#L7)
+[data/countries.ts:16](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/countries.ts#L16)
 
 ___
 
@@ -37,6 +48,17 @@ ___
 ▸ **country**(`country`): `Promise`<{ `calling_code`: `number`[] ; `cca3`: `string` ; `emoji`: `string` ; `key`: `string` ; `subdivision`: { `code`: `string` ; `name`: `string`  }[] ; `value`: `string`  }\>
 
 Retrieves information about a specific country.
+
+**`Example`**
+
+```ts
+import { data } from "apyhub";
+
+const country = () async => {
+  const data = await data.country("United States");
+  return data;
+}
+```
 
 #### Parameters
 
@@ -52,7 +74,7 @@ Retrieves information about a specific country.
 
 #### Defined in
 
-[data/country.ts:8](https://github.com/apyhub/apyhub.js/blob/63910fc/src/data/country.ts#L8)
+[data/country.ts:17](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/country.ts#L17)
 
 ___
 
@@ -61,6 +83,21 @@ ___
 ▸ **currencyConverter**(`params`): `Promise`<{ `data`: `number`  }\>
 
 Converts an amount in one currency to another.
+
+**`Example`**
+
+```ts
+import { data } from "apyhub";
+
+const currencyConverter = async () => {
+  const response = await data.currencyConverter({
+    source: "USD",
+    target: "EUR",
+    date: "2021-01-01",
+  });
+  return response;
+};
+```
 
 #### Parameters
 
@@ -79,7 +116,7 @@ Converts an amount in one currency to another.
 
 #### Defined in
 
-[data/currencyConverter.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/data/currencyConverter.ts#L12)
+[data/currencyConverter.ts:25](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/currencyConverter.ts#L25)
 
 ___
 
@@ -89,6 +126,17 @@ ___
 
 Retrieves a list of currencies and their associated data.
 
+**`Example`**
+
+```ts
+import { data } from "apy-client";
+
+const currencyList = async () => {
+  const data = await data.currencyList();
+  return data;
+}
+```
+
 #### Returns
 
 `Promise`<{ `calling_codes`: `number`[] ; `cca3`: `string` ; `emoji`: `string` ; `key`: `string` ; `value`: `string`  }[]\>
@@ -97,7 +145,7 @@ Retrieves a list of currencies and their associated data.
 
 #### Defined in
 
-[data/currencyList.ts:7](https://github.com/apyhub/apyhub.js/blob/63910fc/src/data/currencyList.ts#L7)
+[data/currencyList.ts:16](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/currencyList.ts#L16)
 
 ___
 
@@ -107,6 +155,17 @@ ___
 
 Retrieves a list of timezones and their associated data.
 
+**`Example`**
+
+```ts
+import { data } from "apy-client";
+
+const timezones = async () => {
+  const data = await data.timezones();
+  return data;
+}
+```
+
 #### Returns
 
 `Promise`<{ `data`: { `abbreviation`: `string`[] ; `key`: `string` ; `utc_time`: `string` ; `value`: `string`  }[]  }\>
@@ -115,4 +174,4 @@ Retrieves a list of timezones and their associated data.
 
 #### Defined in
 
-[data/timezones.ts:7](https://github.com/apyhub/apyhub.js/blob/63910fc/src/data/timezones.ts#L7)
+[data/timezones.ts:16](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/timezones.ts#L16)

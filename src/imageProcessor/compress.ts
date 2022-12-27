@@ -6,15 +6,29 @@ import { handleEndPoint } from "../utils/handleEndpoint";
 import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 /**
-
-Compresses an image.
-@param {Object} options - The options for the function.
-@param {(string|Buffer)} options.input - The input image as a file path or URL, or as a Buffer if it is a file.
-@param {"url"|"file"} options.responseFormat - The desired response format. Can be either "url" or "file".
-@param {number} options.quality - The desired quality of the output image. Must be a number between 1 and 99.
-@param {string} [options.output] - The desired file name for the output image. Default is "output.png".
-@returns {Promise<{data: string}|undefined>} - A promise that resolves to an object with the compressed image as a URL or file, or undefined if the response format is invalid.
-*/
+ * Compresses an image file or URL.
+ *
+ * @param {Object} params - The parameters for the image compression.
+ * @param {"url"|"file"} params.responseFormat - The desired response format.
+ * @param {string|Buffer} params.input - The image file or URL to compress.
+ * @param {number} params.quality - The desired quality of the compressed image.
+ * @param {string} [params.output] - The desired file name for the output compressed image.
+ * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting compressed image file or URL as a string.
+ *
+ * @example
+ *
+ * const { imageProcessor } = require("apyhub");
+ *
+ * const compress = async () => {
+ *   const data = await imageProcessor.compress({
+ *     responseFormat: "url",
+ *     input: "https://assets.apyhub.com/samples/sample.png",
+ *     quality: 50,
+ *     output: "compressed.png"
+ *   });
+ *   return data;
+ * };
+ */
 async function compress({
   input,
   responseFormat,

@@ -14,13 +14,14 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @returns {Promise<{data: string} | undefined>} A promise that resolves to the data for the output file or `undefined` if the response format is not "url".
  *
  * @example
- * const { convert } = require("apy");
+ * const { convert } = require("apyhub");
  *
  * const csvToExcel = async () => {
- *  const response = await convert.csvToExcel({
- *    input: "https://apyhub.com/docs/assets/csv/sample.csv",
+ *  const data = await convert.csvToExcel({
+ *    input: "https://assets.apyhub.com/samples/sample.csv",
  *    responseFormat: "url",
  *   });
+ * return data;
  *  };
  */
 async function csvToExcel({

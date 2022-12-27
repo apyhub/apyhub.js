@@ -18,6 +18,20 @@
 
 Validates an email address.
 
+**`Example`**
+
+```ts
+const { validate } = require("apyhub");
+
+const email = async () => {
+  const data = await validate.email({
+     email: "hello@apyhub.com",
+     checkType: "dns"
+   });
+  return data;
+};
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -34,7 +48,7 @@ Validates an email address.
 
 #### Defined in
 
-[validate/email.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/validate/email.ts#L12)
+[validate/email.ts:24](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/validate/email.ts#L24)
 
 ___
 
@@ -43,6 +57,20 @@ ___
 ▸ **postcode**(`options`): `Promise`<{ `data`: `boolean`  }\>
 
 Validates a postcode.
+
+**`Example`**
+
+```ts
+const { validate } = require("apyhub");
+
+const validatePostcode = async () => {
+  const data = await validate.postcode({
+    postcode: "560037",
+    countryCode: "in"
+  });
+  return data;
+};
+```
 
 #### Parameters
 
@@ -60,7 +88,7 @@ Validates a postcode.
 
 #### Defined in
 
-[validate/postcode.ts:13](https://github.com/apyhub/apyhub.js/blob/63910fc/src/validate/postcode.ts#L13)
+[validate/postcode.ts:25](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/validate/postcode.ts#L25)
 
 ___
 
@@ -69,6 +97,19 @@ ___
 ▸ **vat**(`vat`): `Promise`<{ `data`: `boolean`  }\>
 
 Validates a VAT number.
+
+**`Example`**
+
+```ts
+const { validate } = require("apyhub");
+
+const validateVat = async () => {
+  const data = await validate.vat({
+    vat: "GB123456789"
+  });
+  return data;
+};
+```
 
 #### Parameters
 
@@ -84,4 +125,4 @@ Validates a VAT number.
 
 #### Defined in
 
-[validate/vat.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/validate/vat.ts#L12)
+[validate/vat.ts:23](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/validate/vat.ts#L23)

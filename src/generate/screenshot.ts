@@ -11,6 +11,21 @@ import { checkParamTypes } from "../utils/checkParamsTypes";
  * @param {1|2|3|4|5} [params.quality] - The quality of the screenshot image.
  * @param {"file"|"url"} params.responseFormat - The desired response format.
  * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting screenshot image file or URL as a string.
+ *
+ * @example
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const screenshot = async () => {
+ *   const data = await generate.screenshot({
+ *     responseFormat: "url",
+ *     input: "https://apyhub.com",
+ *     delay: 5,
+ *     quality: 3,
+ *     output: "screenshot.png"
+ *   });
+ *   return data;
+ * };
  */
 async function screenshot({
   input,

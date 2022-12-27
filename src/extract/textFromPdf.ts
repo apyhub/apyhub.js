@@ -8,6 +8,15 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @param {string | Buffer} pdf - The PDF file or URL.
  * @returns {Promise<{data: string}>} A promise that resolves to the text for the PDF.
+ *
+ * @example
+ *
+ * const { extract } = require("apyhub");
+ *
+ * const textFromPdf = async () => {
+ *   const data = await extract.textFromPdf("https://assets.apyhub.com/samples/sample.pdf");
+ *   return data;
+ * };
  */
 async function textFromPdf(pdf: string | Buffer): Promise<{ data: string }> {
   const client = getInstance();

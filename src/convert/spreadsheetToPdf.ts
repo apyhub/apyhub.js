@@ -15,13 +15,14 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @example
  *
- * const { convert } = require("apy");
+ * const { convert } = require("apyhub");
  *
  * const spreadsheetToPdf = async () => {
- *   const response = await convert.spreadsheetToPdf({
- *     input: "https://apyhub.com/docs/assets/spreadsheets/sample.xlsx",
+ *   const data = await convert.spreadsheetToPdf({
+ *     input: "https://assets.apyhub.com/samples/sample.xlsx",
  *     responseFormat: "url",
  *   });
+ *   return data;
  * };
  */
 async function spreadsheetToPdf({

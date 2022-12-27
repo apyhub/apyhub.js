@@ -8,6 +8,15 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @param {string | Buffer} word - The Word document file or URL.
  * @returns {Promise<{data: string}>} A promise that resolves to the text for the Word document.
+ *
+ * @example
+ *
+ * const { extract } = require("apyhub");
+ *
+ * const textFromWord = async () => {
+ *   const data = await extract.textFromWord("https://assets.apyhub.com/samples/sample.docx");
+ *   return data;
+ * };
  */
 async function textFromWord(word: string | Buffer): Promise<{ data: string }> {
   const client = getInstance();

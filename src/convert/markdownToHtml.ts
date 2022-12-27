@@ -18,10 +18,10 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @example
  *
- * const { convert } = require("apy");
+ * const { convert } = require("apyhub");
  *
  * const markdownToHtml = async () => {
- *   const response = await convert.markdownToHtml({
+ *   const data = await convert.markdownToHtml({
  *     input: "# Hello World",
  *     responseFormat: "url",
  *   });

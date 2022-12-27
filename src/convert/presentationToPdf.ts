@@ -18,13 +18,14 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @example
  *
- * const { convert } = require("apy");
+ * const { convert } = require("apyhub");
  *
  * const presentationToPdf = async () => {
- *   const response = await convert.presentationToPdf({
- *     input: "https://example.com/presentation.pptx",
+ *   const data = await convert.presentationToPdf({
+ *     input: "https://assets.apyhub.com/samples/sample.pptx",
  *     responseFormat: "url",
- *    });
+ *   });
+ *   return data
  * };
  */
 async function presentationToPdf({

@@ -6,6 +6,15 @@ import { checkMissingParams } from "../utils/checkMissingParams";
  *
  * @param {string} url - The URL of the webpage.
  * @returns {Promise<{data: string}>} A promise that resolves to the text for the webpage.
+ *
+ * @example
+ *
+ * const { extract } = require("apyhub");
+ *
+ * const textFromWebpage = async () => {
+ *   const data = await extract.textFromWebpage("https://www.apyhub.com");
+ *   return data;
+ * };
  */
 async function textFromWebpage(url: string): Promise<{ data: string }> {
   const client = getInstance();

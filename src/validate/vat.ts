@@ -8,6 +8,17 @@ import { checkMissingParams } from "../utils/checkMissingParams";
  * @param {Object} options - The options for the function.
  * @param {string} options.vat - The VAT number to validate.
  * @returns {Promise<{data: boolean}>} - A promise that resolves to an object with the validation result.
+ *
+ * @example
+ *
+ * const { validate } = require("apyhub");
+ *
+ * const validateVat = async () => {
+ *   const data = await validate.vat({
+ *     vat: "GB123456789"
+ *   });
+ *   return data;
+ * };
  */
 async function vat(vat: string): Promise<{ data: boolean }> {
   const client = getInstance();

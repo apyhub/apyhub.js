@@ -12,6 +12,38 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {string[]|Buffer[]} params.input - The list of files or URLs to archive.
  * @param {string} [params.password] - The password to use for secure archiving.
  * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting archive file or URL as a string.
+ *
+ * @example
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const archive = async () => {
+ *   const data = await generate.archive({
+ *     responseFormat: "url",
+ *     input: [
+ *       "https://assets.apyhub.com/samples/sample.pdf",
+ *       "https://assets.apyhub.com/samples/sample.xlsx",
+ *     ],
+ *   });
+ *   return data;
+ * };
+ *
+ * @example
+ *
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const secureArchive = async () => {
+ *   const data = await generate.archive({
+ *     responseFormat: "url",
+ *     input: [
+ *       "https://assets.apyhub.com/samples/sample.pdf",
+ *       "https://assets.apyhub.com/samples/sample.xlsx",
+ *     ],
+ *     password: "password",
+ *   });
+ *   return data;
+ * };
  */
 async function archive({
   responseFormat,
