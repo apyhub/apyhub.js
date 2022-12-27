@@ -19,6 +19,17 @@
 
 Extracts metadata from an image.
 
+**`Example`**
+
+```ts
+const { extract } = require("apyhub");
+
+const imageMetadata = async () => {
+  const data = await extract.imageMetadata("https://assets.apyhub.com/samples/sample.jpg");
+  return data;
+};
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -33,7 +44,7 @@ A promise that resolves to the metadata for the image.
 
 #### Defined in
 
-[extract/imageMetadata.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/imageMetadata.ts#L12)
+[extract/imageMetadata.ts:21](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/imageMetadata.ts#L21)
 
 ___
 
@@ -42,6 +53,17 @@ ___
 ▸ **textFromPdf**(`pdf`): `Promise`<{ `data`: `string`  }\>
 
 Extracts text from a PDF file.
+
+**`Example`**
+
+```ts
+const { extract } = require("apyhub");
+
+const textFromPdf = async () => {
+  const data = await extract.textFromPdf("https://assets.apyhub.com/samples/sample.pdf");
+  return data;
+};
+```
 
 #### Parameters
 
@@ -57,7 +79,7 @@ A promise that resolves to the text for the PDF.
 
 #### Defined in
 
-[extract/textFromPdf.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/textFromPdf.ts#L12)
+[extract/textFromPdf.ts:21](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/textFromPdf.ts#L21)
 
 ___
 
@@ -66,6 +88,17 @@ ___
 ▸ **textFromWebpage**(`url`): `Promise`<{ `data`: `string`  }\>
 
 Extracts text from a webpage.
+
+**`Example`**
+
+```ts
+const { extract } = require("apyhub");
+
+const textFromWebpage = async () => {
+  const data = await extract.textFromWebpage("https://www.apyhub.com");
+  return data;
+};
+```
 
 #### Parameters
 
@@ -81,7 +114,7 @@ A promise that resolves to the text for the webpage.
 
 #### Defined in
 
-[extract/textFromWebpage.ts:10](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/textFromWebpage.ts#L10)
+[extract/textFromWebpage.ts:19](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/textFromWebpage.ts#L19)
 
 ___
 
@@ -90,6 +123,17 @@ ___
 ▸ **textFromWord**(`word`): `Promise`<{ `data`: `string`  }\>
 
 Extracts text from a Word document.
+
+**`Example`**
+
+```ts
+const { extract } = require("apyhub");
+
+const textFromWord = async () => {
+  const data = await extract.textFromWord("https://assets.apyhub.com/samples/sample.docx");
+  return data;
+};
+```
 
 #### Parameters
 
@@ -105,4 +149,4 @@ A promise that resolves to the text for the Word document.
 
 #### Defined in
 
-[extract/textFromWord.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/textFromWord.ts#L12)
+[extract/textFromWord.ts:21](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/textFromWord.ts#L21)

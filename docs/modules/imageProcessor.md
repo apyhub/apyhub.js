@@ -15,93 +15,137 @@
 
 ### compress
 
-▸ **compress**(`options`): `Promise`<{ `data`: `string`  } \| `undefined`\>
+▸ **compress**(`params`): `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-Compresses an image.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `Object` | The options for the function. |
-| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
-| `options.output?` | `string` | The desired file name for the output image. Default is "output.png". |
-| `options.quality` | `number` | The desired quality of the output image. Must be a number between 1 and 99. |
-| `options.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. Can be either "url" or "file". |
-
-#### Returns
-
-`Promise`<{ `data`: `string`  } \| `undefined`\>
-
-- A promise that resolves to an object with the compressed image as a URL or file, or undefined if the response format is invalid.
-
-#### Defined in
-
-[imageProcessor/compress.ts:18](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/compress.ts#L18)
-
-___
-
-### crop
-
-▸ **crop**(`options`): `Promise`<{ `data`: `string`  } \| `undefined`\>
-
-Crops an image.
-
-#### Parameters
-
-| Name | Type | Description |
-| :------ | :------ | :------ |
-| `options` | `Object` | The options for the function. |
-| `options.height` | `number` | The desired height of the output image. |
-| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
-| `options.output?` | `string` | The desired file name for the output image. Default is "output.png". |
-| `options.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. Can be either "url" or "file". |
-| `options.width` | `number` | The desired width of the output image. |
-
-#### Returns
-
-`Promise`<{ `data`: `string`  } \| `undefined`\>
-
-- A promise that resolves to an object with the cropped image as a URL or file, or undefined if the response format is invalid.
-
-#### Defined in
-
-[imageProcessor/crop.ts:20](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/crop.ts#L20)
-
-___
-
-### resize
-
-▸ **resize**(`options`): `Promise`<{ `data`: `string`  } \| `undefined`\>
-
-Resizes an image.
+Compresses an image file or URL.
 
 **`Example`**
 
 ```ts
+const { imageProcessor } = require("apyhub");
 
+const compress = async () => {
+  const data = await imageProcessor.compress({
+    responseFormat: "url",
+    input: "https://assets.apyhub.com/samples/sample.png",
+    quality: 50,
+    output: "compressed.png"
+  });
+  return data;
+};
 ```
 
 #### Parameters
 
 | Name | Type | Description |
 | :------ | :------ | :------ |
-| `options` | `Object` | The options for the function. |
-| `options.height` | `number` | The desired height of the output image. |
-| `options.input` | `string` \| `Buffer` | The input image as a file path or URL, or as a Buffer if it is a file. |
-| `options.output?` | `string` | The desired file name for the output image. Default is "output.png". |
-| `options.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. Can be either "url" or "file". |
-| `options.width` | `number` | The desired width of the output image. |
+| `params` | `Object` | The parameters for the image compression. |
+| `params.input` | `string` \| `Buffer` | The image file or URL to compress. |
+| `params.output?` | `string` | The desired file name for the output compressed image. |
+| `params.quality` | `number` | The desired quality of the compressed image. |
+| `params.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. |
 
 #### Returns
 
 `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-- A promise that resolves to an object with the resized image as a URL or file, or undefined if the response format is invalid.
+- A promise that resolves with an object containing the resulting compressed image file or URL as a string.
 
 #### Defined in
 
-[imageProcessor/resize.ts:21](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/resize.ts#L21)
+[imageProcessor/compress.ts:32](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/compress.ts#L32)
+
+___
+
+### crop
+
+▸ **crop**(`params`): `Promise`<{ `data`: `string`  } \| `undefined`\>
+
+Crops an image file or URL.
+
+**`Example`**
+
+```ts
+const { imageProcessor } = require("apyhub");
+
+const crop = async () => {
+  const data = await imageProcessor.crop({
+    responseFormat: "url",
+    input: "https://assets.apyhub.com/samples/sample.pdf",
+    height: 200,
+    width: 200,
+    output: "output.png"
+  });
+  return data;
+};
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `params` | `Object` | The parameters for the image cropping. |
+| `params.height` | `number` | The desired height of the cropped image. |
+| `params.input` | `string` \| `Buffer` | The image file or URL to crop. |
+| `params.output?` | `string` | The desired file name for the output cropped image. |
+| `params.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. |
+| `params.width` | `number` | The desired width of the cropped image. |
+
+#### Returns
+
+`Promise`<{ `data`: `string`  } \| `undefined`\>
+
+- A promise that resolves with an object containing the resulting cropped image file or URL as a string.
+
+#### Defined in
+
+[imageProcessor/crop.ts:35](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/crop.ts#L35)
+
+___
+
+### resize
+
+▸ **resize**(`params`): `Promise`<{ `data`: `string`  } \| `undefined`\>
+
+Resizes an image file or URL.
+
+**`Example`**
+
+```ts
+const { imageProcessor } = require("apyhub");
+
+const resize = async () => {
+  const data = await imageProcessor.resize({
+    responseFormat: "url",
+    input: "https://assets.apyhub.com/samples/sample.pdf",
+    height: 200,
+    width: 200,
+    output: "output.png"
+  });
+  return data;
+};
+```
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `params` | `Object` | The parameters for the image resizing. |
+| `params.height` | `number` | The desired height of the resized image. |
+| `params.input` | `string` \| `Buffer` | The image file or URL to resize. |
+| `params.output?` | `string` | The desired file name for the output resized image. |
+| `params.responseFormat` | ``"file"`` \| ``"url"`` | The desired response format. |
+| `params.width` | `number` | The desired width of the resized image. |
+
+#### Returns
+
+`Promise`<{ `data`: `string`  } \| `undefined`\>
+
+- A promise that resolves with an object containing the resulting resized image file or URL as a string.
+
+#### Defined in
+
+[imageProcessor/resize.ts:35](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/resize.ts#L35)
 
 ___
 
@@ -110,6 +154,22 @@ ___
 ▸ **watermark**(`options`): `Promise`<{ `data`: `string`  } \| `undefined`\>
 
 Adds a watermark to an image.
+
+**`Example`**
+
+```ts
+const { imageProcessor } = require("apyhub");
+
+const watermark = async () => {
+  const data = await imageProcessor.watermark({
+    input: "https://assets.apyhub.com/samples/sample.pdf",
+    watermark: "https://assets.apyhub.com/samples/sample.pdf",
+    responseFormat: "url",
+    output: "output.png"
+  });
+  return data;
+};
+```
 
 #### Parameters
 
@@ -129,4 +189,4 @@ Adds a watermark to an image.
 
 #### Defined in
 
-[imageProcessor/watermark.ts:20](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/watermark.ts#L20)
+[imageProcessor/watermark.ts:34](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/watermark.ts#L34)

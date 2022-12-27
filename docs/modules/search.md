@@ -16,6 +16,21 @@
 
 Fuzzy search.
 
+**`Example`**
+
+```ts
+const { search } = require("apyhub");
+
+const fuzzy = async () => {
+   const data = await search.fuzzy({
+   source: "taching",
+   target: "teaching is the best qualifying compare another profession",
+   unicodeNormalized: false
+ });
+return data;
+};
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -33,4 +48,4 @@ Fuzzy search.
 
 #### Defined in
 
-[search/fuzzy.ts:11](https://github.com/apyhub/apyhub.js/blob/63910fc/src/search/fuzzy.ts#L11)
+[search/fuzzy.ts:24](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/search/fuzzy.ts#L24)
