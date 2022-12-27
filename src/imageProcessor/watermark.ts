@@ -15,6 +15,20 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {"url"|"file"} options.responseFormat - The desired response format. Can be either "url" or "file".
  * @param {string|Buffer} [options.output] - The desired file name for the output image. Default is "output.png".
  * @returns {Promise<{data: string}|undefined>} - A promise that resolves to an object with the watermarked image as a URL or file, or undefined if the response format is invalid.
+ *
+ * @example
+ *
+ * const { imageProcessor } = require("apyhub");
+ *
+ * const watermark = async () => {
+ *   const data = await imageProcessor.watermark({
+ *     input: "https://assets.apyhub.com/samples/sample.pdf",
+ *     watermark: "https://assets.apyhub.com/samples/sample.pdf",
+ *     responseFormat: "url",
+ *     output: "output.png"
+ *   });
+ *   return data;
+ * };
  */
 
 async function watermark({
