@@ -4,49 +4,65 @@ import { checkParamTypes } from "../utils/checkParamsTypes";
 
 /**
  * Generates a chart image from data and chart options.
- * @param {Object} params - The parameters for the chart generation.
- * @param {"file"|"url"} params.responseFormat - The desired response format.
- * @param {"bar"|"pie"|"stacked"} params.chartType - The type of chart to generate.
- * @param {string} [params.output] - The desired file name for the output chart image.
- * @param {Object} params.options - The chart options.
- * @param {string} params.options.title - The chart title.
- * @param {"light"|"dark"} params.options.theme - The chart theme.
- * @param {Array<{value: number, label: string}>} params.options.data - The data for the chart.
- * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting chart image file or URL as a string.
+ * @param {Object} options - The options object.
+ * @param {"file"|"url"} options.responseFormat - The format in which the chart should be returned. Valid values are "url" or "file".
+ * @param {"bar"|"pie"|"stacked"} options.chartType - The type of chart to generate. Valid values are "bar", "pie" or "stacked".
+ * @param {string} [options.output] - The file path where the chart should be saved. This parameter is only used if responseFormat is "file".
+ * @param {string} [options.title] - The title of the chart.
+ * @param {"light"|"dark"} [options.theme] - The theme of the chart. Valid values are "light" or "dark".
+ * @param {Array<{value: number, label: string}>} options.data - The data to be used to generate the chart.
+ * @returns {Promise<{data: string}>} A promise that resolves with the chart data if successful.
+ * @example
+ * const { charts } = require("apyhub");
+ *
+ * const data = [
+ *  { value: 10, label: "A" },
+ * { value: 20, label: "B" },
+ * { value: 30, label: "C" },
+ * { value: 40, label: "D" },
+ * ]
+ *
+ * charts({
+ * responseFormat: "file",
+ * chartType: "bar",
+ * output: "chart.png",
+ * title: "My Chart",
+ * theme: "light",
+ * data,
+ * }).then((res) => {
+ * console.log(res);
+ * });
+ *
  */
 async function charts({
   responseFormat,
   chartType,
-  options,
   output,
+  title,
+  theme,
+  data,
 }: {
   responseFormat: "file" | "url";
   chartType: "bar" | "pie" | "stacked";
   output?: string;
-  options: {
-    output?: string;
-    title: string;
-    theme: "light" | "dark";
-    data: Array<{ value: number; label: string }>;
-  };
+  title?: string;
+  theme?: "light" | "dark";
+  data: Array<{ value: number; label: string }>;
 }): Promise<{ data: string }> {
   const client = getInstance();
-  console.log(options);
-  const { title, theme, data } = options;
 
-  checkMissingParams({ responseFormat, chartType, options, data });
+  checkMissingParams({ responseFormat, chartType, data });
   checkParamTypes({ responseFormat }, ["file", "url"]);
   checkParamTypes({ chartType }, ["bar", "pie", "stacked"]);
-  checkParamTypes({ theme }, ["light", "dark"]);
+  theme && checkParamTypes({ theme }, ["light", "dark"]);
 
   const url = `https://api.apyhub.com/generate/charts/${chartType}/${responseFormat}?output=${output ??
     "output.png"}`;
   const payload = {
-    title,
-    theme: theme[0].toUpperCase() + theme.slice(1),
+    ...(title && { title }),
+    ...(theme && { theme: theme[0].toUpperCase() + theme.slice(1) }),
     data,
   };
-  console.log(payload);
   return await client.request("post", url, payload);
 }
 

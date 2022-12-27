@@ -1,7 +1,4 @@
 import { getInstance } from "../ApyClient";
-import { checkMissingParams } from "../utils/checkMissingParams";
-
-// Add JsDocs for the fuzzy search function
 
 /**
  *  Fuzzy search.
@@ -16,13 +13,12 @@ async function fuzzy({
   target,
   unicodeNormalized = false,
 }: {
-  source: string;
-  target: string;
+  source?: string;
+  target?: string;
   unicodeNormalized?: boolean;
 }): Promise<{ data: string } | undefined> {
   const client = getInstance();
 
-  checkMissingParams({ source, target });
   const requestUrl = `https://api.apyhub.com/search/text/fuzzy?unicode-normalized=${unicodeNormalized.toString()}`;
 
   return await client.request(

@@ -19,9 +19,9 @@ async function postcode({
 }): Promise<{ data: boolean }> {
   const client = getInstance();
   checkMissingParams({ postcode, countryCode });
-  checkParamTypes({ countryCode }, ["in", "uk"]);
+  checkParamTypes({ countryCode: countryCode.toLowerCase() }, ["in", "uk"]);
 
-  const url = `https://api.apyhub.com/validate/email/postcodes/${countryCode.toLowerCase()}`;
+  const url = `https://api.apyhub.com/validate/postcodes/${countryCode.toLowerCase()}`;
   return await client.request("post", url, { postcode });
 }
 
