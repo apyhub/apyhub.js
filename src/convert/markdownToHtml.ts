@@ -11,17 +11,28 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * This function converts the given markdown input to HTML and returns the result.
  *
  * @param {Object} params - The parameters for the conversion.
- * @param {(string)} params.input - The markdown input. Can be a file or URL.
+ * @param {string|Buffer} params.input - The markdown input.
  * @param {"url"|"file"} params.responseFormat - The format of the response. Can be "url" or "file".
  * @param {string} [params.output] - The name of the output file.
  * @return {Promise<{data: string}|undefined>} - A promise that resolves with the HTML output.
+ *
+ * @example
+ *
+ * const { convert } = require("apy");
+ *
+ * const markdownToHtml = async () => {
+ *   const response = await convert.markdownToHtml({
+ *     input: "# Hello World",
+ *     responseFormat: "url",
+ *   });
+ * }
  */
 async function markdownToHtml({
   input,
   responseFormat,
   output,
 }: {
-  input: string;
+  input: string | Buffer;
   responseFormat: "url" | "file";
   output?: string;
 }): Promise<{ data: string } | undefined> {

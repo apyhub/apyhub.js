@@ -9,7 +9,7 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {Object} params - The parameters for the archive creation.
  * @param {"url"|"file"} params.responseFormat - The desired response format.
  * @param {string} [params.output] - The desired file name for the output archive.
- * @param {string[]} params.input - The list of files or URLs to include in the archive.
+ * @param {string[]|Buffer[]} params.input - The list of files or URLs to archive.
  * @param {string} [params.password] - The password to use for secure archiving.
  * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting archive file or URL as a string.
  */

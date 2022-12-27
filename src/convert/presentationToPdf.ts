@@ -11,17 +11,28 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * This function converts the given presentation input to PDF and returns the result.
  *
  * @param {Object} params - The parameters for the conversion.
- * @param {(string)} params.input - The presentation input. Can be a file or URL.
+ * @param {string|Buffer} params.input - The presentation input.
  * @param {"url"|"file"} params.responseFormat - The format of the response. Can be "url" or "file".
  * @param {string} [params.output] - The name of the output file.
  * @return {Promise<{data: string}|undefined>} - A promise that resolves with the PDF output.
+ *
+ * @example
+ *
+ * const { convert } = require("apy");
+ *
+ * const presentationToPdf = async () => {
+ *   const response = await convert.presentationToPdf({
+ *     input: "https://example.com/presentation.pptx",
+ *     responseFormat: "url",
+ *    });
+ * };
  */
 async function presentationToPdf({
   input,
   responseFormat,
   output,
 }: {
-  input: string;
+  input: string | Buffer;
   responseFormat: "url" | "file";
   output?: string;
 }): Promise<{ data: string } | undefined> {
