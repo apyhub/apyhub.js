@@ -12,7 +12,7 @@ import { checkMissingParams } from "../utils/checkMissingParams";
 async function vat(vat: string): Promise<{ data: boolean }> {
   const client = getInstance();
   checkMissingParams({ vat });
-  const url = `https://api.apyhub.com/validate/email/postcodes/vat`;
+  const url = `https://api.apyhub.com/validate/vat`;
   return await client.request("post", url, { vat });
 }
 
