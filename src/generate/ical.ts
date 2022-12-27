@@ -2,26 +2,48 @@ import { getInstance } from "../ApyClient";
 import { checkMissingParams } from "../utils/checkMissingParams";
 import { checkParamTypes } from "../utils/checkParamsTypes";
 /**
-
-Generates an iCalendar file or URL
-@param {Object} options - The options object
-@param {string} [options.output] - The name of the output file
-@param {string} options.responseFormat - The desired response format - either "file" or "url"
-@param {string} options.summary - The summary of the event
-@param {string} options.description - The description of the event
-@param {string} options.organizerEmail - The email address of the organizer of the event
-@param {string[]} options.attendeesEmails - An array of email addresses of attendees of the event
-@param {string} [options.location] - The location of the event
-@param {string} options.timeZone - The time zone of the event
-@param {string} options.startTime - The start time of the event
-@param {string} options.endTime - The end time of the event
-@param {string} options.meetingDate - The date of the event
-@param {boolean} options.recurring - Whether the event is recurring or not
-@param {Object} [options.recurrence] - The recurrence options for the event
-@param {string} [options.recurrence.frequency] - The frequency of the event's recurrence - possible values are "daily", "weekly", "monthly", or "yearly"
-@param {number} [options.recurrence.count] - The number of times the event should recur
-@returns {Promise<{data: string}>} A promise that resolves to an object with the data - either the file or URL depending on the response format
-*/
+ * Generates an iCalendar file from a list of parameters.
+ * @param {Object} params - The parameters for the iCalendar file generation.
+ * @param {"file"|"url"} params.responseFormat - The desired response format.
+ * @param {string} params.summary - The meeting summary.
+ * @param {string} params.description - The meeting description.
+ * @param {string} params.organizerEmail - The meeting organizer's email address.
+ * @param {string[]} params.attendeesEmails - The meeting attendees' email addresses.
+ * @param {string} [params.location] - The meeting location.
+ * @param {string} params.timeZone - The meeting time zone.
+ * @param {string} params.startTime - The meeting start time.
+ * @param {string} params.endTime - The meeting end time.
+ * @param {string} params.meetingDate - The meeting date.
+ * @param {boolean} params.recurring - Whether the meeting is recurring.
+ * @param {Object} [params.recurrence] - The meeting recurrence parameters.
+ * @param {string} [params.recurrence.frequency] - The meeting recurrence frequency.
+ * @param {number} [params.recurrence.count] - The meeting recurrence count.
+ *
+ * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting iCalendar file or URL as a string.
+ *
+ * @example
+ *
+ * const { generate } = require("apyhub");
+ *
+ * const ical = async () => {
+ *   const data = await generate.ical({
+ *     responseFormat: "url",
+ *     summary: "Meeting",
+ *     description: "Meeting description",
+ *     organizerEmail: "your@mail.com",
+ *     attendeesEmails: ["john@mail.com", "sally@mail.com"],
+ *     timeZone: "America/New_York",
+ *     startTime: "10:00",
+ *     endTime: "11:00",
+ *     meetingDate: "2020-01-01",
+ *     recurring: true,
+ *     recurrence: {
+ *       frequency: "WEEKLY",
+ *       count: 5,
+ *      },
+ *   });
+ *   return data;
+ */
 async function ical({
   output,
   responseFormat,
