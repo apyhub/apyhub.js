@@ -33,7 +33,7 @@ A promise that resolves to the metadata for the image.
 
 #### Defined in
 
-[extract/imageMetadata.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/imageMetadata.ts#L12)
+[extract/imageMetadata.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/imageMetadata.ts#L12)
 
 ___
 
@@ -57,7 +57,7 @@ A promise that resolves to the text for the PDF.
 
 #### Defined in
 
-[extract/textFromPdf.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/textFromPdf.ts#L12)
+[extract/textFromPdf.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/textFromPdf.ts#L12)
 
 ___
 
@@ -81,7 +81,7 @@ A promise that resolves to the text for the webpage.
 
 #### Defined in
 
-[extract/textFromWebpage.ts:10](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/textFromWebpage.ts#L10)
+[extract/textFromWebpage.ts:10](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/textFromWebpage.ts#L10)
 
 ___
 
@@ -105,4 +105,4 @@ A promise that resolves to the text for the Word document.
 
 #### Defined in
 
-[extract/textFromWord.ts:12](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/extract/textFromWord.ts#L12)
+[extract/textFromWord.ts:12](https://github.com/apyhub/apyhub.js/blob/63910fc/src/extract/textFromWord.ts#L12)

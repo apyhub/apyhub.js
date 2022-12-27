@@ -41,7 +41,7 @@ Creates an archive file (zip) from a list of files or URLs.
 
 #### Defined in
 
-[generate/archive.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/archive.ts#L16)
+[generate/archive.ts:16](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/archive.ts#L16)
 
 ___
 
@@ -68,7 +68,7 @@ Generates a barcode image from a string of up to 80 characters.
 
 #### Defined in
 
-[generate/barcode.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/barcode.ts#L13)
+[generate/barcode.ts:13](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/barcode.ts#L13)
 
 ___
 
@@ -122,7 +122,7 @@ A promise that resolves with the chart data if successful.
 
 #### Defined in
 
-[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/charts.ts#L37)
+[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/charts.ts#L37)
 
 ___
 
@@ -161,7 +161,7 @@ A promise that resolves to an object with the data - either the file or URL depe
 
 #### Defined in
 
-[generate/ical.ts:25](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/ical.ts#L25)
+[generate/ical.ts:25](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/ical.ts#L25)
 
 ___
 
@@ -188,7 +188,7 @@ Generates a PDF file from an HTML string or URL.
 
 #### Defined in
 
-[generate/pdf.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/pdf.ts#L13)
+[generate/pdf.ts:13](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/pdf.ts#L13)
 
 ___
 
@@ -215,7 +215,7 @@ Generates a QR code image from a string.
 
 #### Defined in
 
-[generate/qr.ts:13](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/qr.ts#L13)
+[generate/qr.ts:13](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/qr.ts#L13)
 
 ___
 
@@ -244,7 +244,7 @@ Takes a screenshot of a webpage.
 
 #### Defined in
 
-[generate/screenshot.ts:15](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/screenshot.ts#L15)
+[generate/screenshot.ts:15](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/screenshot.ts#L15)
 
 ___
 
@@ -273,4 +273,4 @@ A promise that resolves with the thumbnail data if successful, or undefined if a
 
 #### Defined in
 
-[generate/thumbnail.ts:18](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/generate/thumbnail.ts#L18)
+[generate/thumbnail.ts:18](https://github.com/apyhub/apyhub.js/blob/63910fc/src/generate/thumbnail.ts#L18)

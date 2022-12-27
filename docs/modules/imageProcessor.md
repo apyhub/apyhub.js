@@ -37,7 +37,7 @@ Compresses an image.
 
 #### Defined in
 
-[imageProcessor/compress.ts:18](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/compress.ts#L18)
+[imageProcessor/compress.ts:18](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/compress.ts#L18)
 
 ___
 
@@ -66,7 +66,7 @@ Crops an image.
 
 #### Defined in
 
-[imageProcessor/crop.ts:20](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/crop.ts#L20)
+[imageProcessor/crop.ts:20](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/crop.ts#L20)
 
 ___
 
@@ -101,7 +101,7 @@ Resizes an image.
 
 #### Defined in
 
-[imageProcessor/resize.ts:21](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/resize.ts#L21)
+[imageProcessor/resize.ts:21](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/resize.ts#L21)
 
 ___
 
@@ -129,4 +129,4 @@ Adds a watermark to an image.
 
 #### Defined in
 
-[imageProcessor/watermark.ts:20](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/imageProcessor/watermark.ts#L20)
+[imageProcessor/watermark.ts:20](https://github.com/apyhub/apyhub.js/blob/63910fc/src/imageProcessor/watermark.ts#L20)

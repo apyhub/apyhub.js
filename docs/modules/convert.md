@@ -22,6 +22,19 @@
 
 Converts a CSV file or URL to an Excel file.
 
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const csvToExcel = async () => {
+ const response = await convert.csvToExcel({
+   input: "https://apyhub.com/docs/assets/csv/sample.csv",
+   responseFormat: "url",
+  });
+ };
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -39,7 +52,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/csvToExcel.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/csvToExcel.ts#L16)
+[convert/csvToExcel.ts:26](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/csvToExcel.ts#L26)
 
 ___
 
@@ -48,6 +61,19 @@ ___
 ▸ **htmlToPdf**(`params`): `Promise`<{ `data`: `string`  } \| `undefined`\>
 
 Converts an HTML file or URL to a PDF file.
+
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const htmlToPdf = async () => {
+  const response = await convert.htmlToPdf({
+    input: "https://apyhub.com/docs/assets/html/sample.html",
+    responseFormat: "url",
+  });
+}
+```
 
 #### Parameters
 
@@ -66,7 +92,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/htmlToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/htmlToPdf.ts#L16)
+[convert/htmlToPdf.ts:27](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/htmlToPdf.ts#L27)
 
 ___
 
@@ -75,6 +101,19 @@ ___
 ▸ **imageToPdf**(`params`): `Promise`<{ `data`: `string`  } \| `undefined`\>
 
 Converts an image file or URL to a PDF file.
+
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const imageToPdf = async () => {
+  const response = await convert.imageToPdf({
+    input: "https://apyhub.com/docs/assets/images/sample.png",
+    responseFormat: "url",
+  });
+}
+```
 
 #### Parameters
 
@@ -93,7 +132,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/imageToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/imageToPdf.ts#L16)
+[convert/imageToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/imageToPdf.ts#L28)
 
 ___
 
@@ -104,6 +143,19 @@ ___
 Convert markdown to HTML.
 
 This function converts the given markdown input to HTML and returns the result.
+
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const markdownToHtml = async () => {
+  const response = await convert.markdownToHtml({
+    input: "# Hello World",
+    responseFormat: "url",
+  });
+}
+```
 
 #### Parameters
 
@@ -122,7 +174,7 @@ This function converts the given markdown input to HTML and returns the result.
 
 #### Defined in
 
-[convert/markdownToHtml.ts:19](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/markdownToHtml.ts#L19)
+[convert/markdownToHtml.ts:30](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/markdownToHtml.ts#L30)
 
 ___
 
@@ -133,6 +185,19 @@ ___
 Convert a presentation to PDF.
 
 This function converts the given presentation input to PDF and returns the result.
+
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const presentationToPdf = async () => {
+  const response = await convert.presentationToPdf({
+    input: "https://example.com/presentation.pptx",
+    responseFormat: "url",
+   });
+};
+```
 
 #### Parameters
 
@@ -151,7 +216,7 @@ This function converts the given presentation input to PDF and returns the resul
 
 #### Defined in
 
-[convert/presentationToPdf.ts:19](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/presentationToPdf.ts#L19)
+[convert/presentationToPdf.ts:30](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/presentationToPdf.ts#L30)
 
 ___
 
@@ -161,6 +226,19 @@ ___
 
 Converts a spreadsheet file or URL to a PDF file.
 
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const spreadsheetToPdf = async () => {
+  const response = await convert.spreadsheetToPdf({
+    input: "https://apyhub.com/docs/assets/spreadsheets/sample.xlsx",
+    responseFormat: "url",
+  });
+};
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -178,7 +256,7 @@ Converts a spreadsheet file or URL to a PDF file.
 
 #### Defined in
 
-[convert/spreadsheetToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/spreadsheetToPdf.ts#L16)
+[convert/spreadsheetToPdf.ts:27](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/spreadsheetToPdf.ts#L27)
 
 ___
 
@@ -188,6 +266,19 @@ ___
 
 Converts a Word file or URL to a PDF file.
 
+**`Example`**
+
+```ts
+const { convert } = require("apy");
+
+const wordToPdf = async () => {
+  const response = await convert.wordToPdf({
+   input: "https://apyhub.com/docs/assets/word/sample.docx",
+   responseFormat: "url",
+  });
+};
+```
+
 #### Parameters
 
 | Name | Type | Description |
@@ -205,4 +296,4 @@ Converts a Word file or URL to a PDF file.
 
 #### Defined in
 
-[convert/wordToPdf.ts:16](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/convert/wordToPdf.ts#L16)
+[convert/wordToPdf.ts:27](https://github.com/apyhub/apyhub.js/blob/63910fc/src/convert/wordToPdf.ts#L27)

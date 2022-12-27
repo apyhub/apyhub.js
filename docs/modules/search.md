@@ -33,4 +33,4 @@ Fuzzy search.
 
 #### Defined in
 
-[search/fuzzy.ts:11](https://github.com/apyhub/apyhub.js/blob/cfcbfad/src/search/fuzzy.ts#L11)
+[search/fuzzy.ts:11](https://github.com/apyhub/apyhub.js/blob/63910fc/src/search/fuzzy.ts#L11)
