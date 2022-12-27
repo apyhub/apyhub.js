@@ -15,6 +15,16 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {"url"|"file"} params.responseFormat - The format of the response. Can be "url" or "file".
  * @param {string} [params.output] - The name of the output file.
  * @return {Promise<{data: string}|undefined>} - A promise that resolves with the PDF output.
+ *
+ * @example
+ *
+ * const { convert } = require("apy");
+ *
+ * const presentationToPdf = async () => {
+ *   const response = await convert.presentationToPdf({
+ *     input: "https://example.com/presentation.pptx",
+ *     responseFormat: "url",
+ *
  */
 async function presentationToPdf({
   input,

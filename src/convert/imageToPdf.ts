@@ -18,10 +18,11 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * const { convert } = require("apy");
  *
  * const imageToPdf = async () => {
- *  const response = await convert.imageToPdf({
- *    input: "https://apyhub.com/docs/assets/images/sample.png",
- *    responseFormat: "url",
- * });
+ *   const response = await convert.imageToPdf({
+ *     input: "https://apyhub.com/docs/assets/images/sample.png",
+ *     responseFormat: "url",
+ *   });
+ * }
  *
  */
 async function imageToPdf({

@@ -18,10 +18,11 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * const { convert } = require("apy");
  *
  * const htmlToPdf = async () => {
- *  const response = await convert.htmlToPdf({
- *    input: "https://apyhub.com/docs/assets/html/sample.html",
- *    responseFormat: "url",
- * });
+ *   const response = await convert.htmlToPdf({
+ *     input: "https://apyhub.com/docs/assets/html/sample.html",
+ *     responseFormat: "url",
+ *   });
+ * }
  */
 async function htmlToPdf({
   input,

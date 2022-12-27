@@ -15,6 +15,17 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {"url"|"file"} params.responseFormat - The format of the response. Can be "url" or "file".
  * @param {string} [params.output] - The name of the output file.
  * @return {Promise<{data: string}|undefined>} - A promise that resolves with the HTML output.
+ *
+ * @example
+ *
+ * const { convert } = require("apy");
+ *
+ * const markdownToHtml = async () => {
+ *   const response = await convert.markdownToHtml({
+ *     input: "# Hello World",
+ *     responseFormat: "url",
+ *   });
+ * }
  */
 async function markdownToHtml({
   input,

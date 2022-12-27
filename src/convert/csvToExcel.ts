@@ -18,10 +18,10 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * const csvToExcel = async () => {
  *  const response = await convert.csvToExcel({
- *  input: "https://apyhub.com/docs/assets/csv/sample.csv",
- *  responseFormat: "url",
- * });
- *
+ *    input: "https://apyhub.com/docs/assets/csv/sample.csv",
+ *    responseFormat: "url",
+ *   });
+ *  };
  */
 async function csvToExcel({
   input,
