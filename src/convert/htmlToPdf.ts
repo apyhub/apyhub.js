@@ -12,6 +12,16 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {"url" | "file"} params.responseFormat - The format for the response.
  * @param {string} [params.output] - The name for the output PDF file.
  * @returns {Promise<{data: string} | undefined>} A promise that resolves to the data for the output file or `undefined` if the response format is not "url".
+ *
+ * @example
+ *
+ * const { convert } = require("apy");
+ *
+ * const htmlToPdf = async () => {
+ *  const response = await convert.htmlToPdf({
+ *    input: "https://apyhub.com/docs/assets/html/sample.html",
+ *    responseFormat: "url",
+ * });
  */
 async function htmlToPdf({
   input,

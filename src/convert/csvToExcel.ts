@@ -12,6 +12,16 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  * @param {"url" | "file"} params.responseFormat - The format for the response.
  * @param {string} [params.output] - The name for the output Excel file.
  * @returns {Promise<{data: string} | undefined>} A promise that resolves to the data for the output file or `undefined` if the response format is not "url".
+ *
+ * @example
+ * const { convert } = require("apy");
+ *
+ * const csvToExcel = async () => {
+ *  const response = await convert.csvToExcel({
+ *  input: "https://apyhub.com/docs/assets/csv/sample.csv",
+ *  responseFormat: "url",
+ * });
+ *
  */
 async function csvToExcel({
   input,
