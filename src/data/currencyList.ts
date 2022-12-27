@@ -8,7 +8,10 @@ import { getInstance } from "../ApyClient";
  *
  * import { data } from "apy-client";
  *
- * const currencyList = await data.currencyList();
+ * const currencyList = async () => {
+ *   const data = await data.currencyList();
+ *   return data;
+ * }
  */
 async function currencyList(): Promise<
   Array<{

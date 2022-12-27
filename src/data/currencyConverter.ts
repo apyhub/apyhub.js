@@ -19,6 +19,7 @@ import { checkMissingParams } from "../utils/checkMissingParams";
  *     target: "EUR",
  *     date: "2021-01-01",
  *   });
+ *   return response;
  * };
  */
 async function currencyConverter({

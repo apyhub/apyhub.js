@@ -11,7 +11,12 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @example
  *
- * const {extract} = require("apyhub");
+ * const { extract } = require("apyhub");
+ *
+ * const imageMetadata = async () => {
+ *   const data = await extract.imageMetadata("https://assets.apyhub.com/samples/sample.jpg");
+ *   return data;
+ * };
  */
 async function imageMetadata(
   image: string | Buffer

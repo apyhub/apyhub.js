@@ -7,9 +7,12 @@ import { getInstance } from "../ApyClient";
  *
  * @example
  *
- * import { data } from "apy-client";
+ * import { data } from "apyhub";
  *
- * const country = await data.country("United States");
+ * const country = () async => {
+ *   const data = await data.country("United States");
+ *   return data;
+ * }
  */
 async function country(
   country: string

@@ -8,7 +8,10 @@ import { getInstance } from "../ApyClient";
  *
  * import { data } from "apy-client";
  *
- * const timezones = await data.timezones();
+ * const timezones = async () => {
+ *   const data = await data.timezones();
+ *   return data;
+ * }
  */
 async function timezones(): Promise<{
   data: Array<{

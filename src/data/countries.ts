@@ -6,9 +6,12 @@ import { getInstance } from "../ApyClient";
  *
  * @example
  *
- * import { data } from "apy-client";
+ * import { data } from "apyhub";
  *
- * const countries = await data.countries();
+ * const countries = async () => {
+ *   const data = await data.countries();
+ *    return data;
+ * }
  */
 async function countries(): Promise<
   Array<{
