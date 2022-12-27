@@ -8,6 +8,10 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @param {string | Buffer} image - The image file or URL.
  * @returns {Promise<{data: string}>} A promise that resolves to the metadata for the image.
+ *
+ * @example
+ *
+ * const {extract} = require("apyhub");
  */
 async function imageMetadata(
   image: string | Buffer

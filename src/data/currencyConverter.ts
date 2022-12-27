@@ -11,7 +11,7 @@ import { checkMissingParams } from "../utils/checkMissingParams";
  *
  * @example
  *
- * import { data } from "apy-client";
+ * import { data } from "apyhub";
  *
  * const currencyConverter = async () => {
  *   const response = await data.currencyConverter({

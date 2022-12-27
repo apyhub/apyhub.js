@@ -15,13 +15,14 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
  *
  * @example
  *
- * const { convert } = require("apy");
+ * const { convert } = require("apyhub");
  *
  * const imageToPdf = async () => {
- *   const response = await convert.imageToPdf({
- *     input: "https://apyhub.com/docs/assets/images/sample.png",
+ *   const data = await convert.imageToPdf({
+ *     input: "https://assets.apyhub.com/samples/sample.jpg",
  *     responseFormat: "url",
  *   });
+ *  return data;
  * }
  *
  */
