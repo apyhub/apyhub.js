@@ -8,6 +8,18 @@ import { checkParamTypes } from "../utils/checkParamsTypes";
  * @param {string} options.email - The email address to validate.
  * @param {"dns"|"academic"} options.checkType - The type of validation to perform. Can be either "dns" or "academic".
  * @returns {Promise<{data: boolean}>} - A promise that resolves to an object with the validation result.
+ *
+ * @example
+ *
+ * const { validate } = require("apyhub");
+ *
+ * const email = async () => {
+ *   const data = await validate.email({
+ *      email: "hello@apyhub.com",
+ *      checkType: "dns"
+ *    });
+ *   return data;
+ * };
  */
 async function email({
   email,
