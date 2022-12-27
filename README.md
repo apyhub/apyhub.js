@@ -1,4 +1,15 @@
-# ApyHub SDK for Node.js
+<div align="center">
+  <img src="https://apyhub.com/logo.svg" alt="Alt text" width="256px" height="256px">
+
+  # ApyHub for Node.js
+
+![npm](https://img.shields.io/npm/v/apyhub)
+![npm](https://img.shields.io/npm/dt/apyhub)
+![npm bundle size](https://img.shields.io/bundlephobia/min/apyhub)
+![Discord](https://img.shields.io/discord/998969119657427024)
+</div>
+
+## About
 
 Welcome to the ApyHub SDK for Node.js! This library provides easy access to the ApyHub APIs through a set of simple and powerful functions.
 
