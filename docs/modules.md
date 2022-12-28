@@ -266,7 +266,7 @@ A Promise that resolves when the download is complete.
 
 #### Defined in
 
-[utils/download.ts:27](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/utils/download.ts#L27)
+[utils/download.ts:27](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/utils/download.ts#L27)
 
 ___
 
@@ -283,7 +283,7 @@ Initializes the Apyhub API client.
 | `apyToken` | `string` \| { `password`: `string` ; `username`: `string`  } | The Apyhub API token or Basic Authorization credentials. |
 | `options?` | `Object` | Options for the API client. |
 | `options.debug` | `boolean` | - |
-| `options.rateLimit` | `number` | The rate limit for the API client. |
+| `options.rateLimit` | ``1`` \| ``2`` \| ``3`` \| ``4`` \| ``5`` | The rate limit for the API client. |
 
 #### Returns
 
@@ -291,4 +291,4 @@ Initializes the Apyhub API client.
 
 #### Defined in
 
-[ApyClient.ts:209](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/ApyClient.ts#L209)
+[ApyClient.ts:209](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/ApyClient.ts#L209)

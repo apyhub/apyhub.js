@@ -44,7 +44,7 @@ A promise that resolves to the metadata for the image.
 
 #### Defined in
 
-[extract/imageMetadata.ts:21](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/imageMetadata.ts#L21)
+[extract/imageMetadata.ts:21](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/extract/imageMetadata.ts#L21)
 
 ___
 
@@ -79,7 +79,7 @@ A promise that resolves to the text for the PDF.
 
 #### Defined in
 
-[extract/textFromPdf.ts:21](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/textFromPdf.ts#L21)
+[extract/textFromPdf.ts:21](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/extract/textFromPdf.ts#L21)
 
 ___
 
@@ -114,7 +114,7 @@ A promise that resolves to the text for the webpage.
 
 #### Defined in
 
-[extract/textFromWebpage.ts:19](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/textFromWebpage.ts#L19)
+[extract/textFromWebpage.ts:19](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/extract/textFromWebpage.ts#L19)
 
 ___
 
@@ -149,4 +149,4 @@ A promise that resolves to the text for the Word document.
 
 #### Defined in
 
-[extract/textFromWord.ts:21](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/extract/textFromWord.ts#L21)
+[extract/textFromWord.ts:21](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/extract/textFromWord.ts#L21)
