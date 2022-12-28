@@ -14,7 +14,7 @@
 
 Welcome to the ApyHub SDK for Node.js! This library provides easy access to the ApyHub APIs through a set of simple and powerful functions.
 
-With this SDK, you can easily perform tasks such as file conversion, text and metadata extraction, document and image generation, image processing, and access to data lists and currency conversion. As our platform grows and develops new APIs, we will be adding more functions to this library.
+Our underlying philosophy is to not bloat applications, which is why we have made sure to keep the package as minimal as possible. With this SDK, you can easily perform tasks such as file conversion, text and metadata extraction, document and image generation, image processing, and access to data lists and currency conversion. As our platform grows and develops new APIs, we will be adding more functions to this library.
 
 To learn more about ApyHub, visit our website at **[apyhub.com](https://www.apyhub.com/)** or join our Discord server at [**discord.com/invite/apyhub**](https://discord.gg/JZagJJcw6F).
 
