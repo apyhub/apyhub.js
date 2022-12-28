@@ -39,7 +39,7 @@ const countries = async () => {
 
 #### Defined in
 
-[data/countries.ts:16](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/countries.ts#L16)
+[data/countries.ts:16](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/data/countries.ts#L16)
 
 ___
 
@@ -74,7 +74,7 @@ const country = () async => {
 
 #### Defined in
 
-[data/country.ts:17](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/country.ts#L17)
+[data/country.ts:17](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/data/country.ts#L17)
 
 ___
 
@@ -116,7 +116,7 @@ const currencyConverter = async () => {
 
 #### Defined in
 
-[data/currencyConverter.ts:25](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/currencyConverter.ts#L25)
+[data/currencyConverter.ts:25](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/data/currencyConverter.ts#L25)
 
 ___
 
@@ -145,7 +145,7 @@ const currencyList = async () => {
 
 #### Defined in
 
-[data/currencyList.ts:16](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/currencyList.ts#L16)
+[data/currencyList.ts:16](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/data/currencyList.ts#L16)
 
 ___
 
@@ -174,4 +174,4 @@ const timezones = async () => {
 
 #### Defined in
 
-[data/timezones.ts:16](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/data/timezones.ts#L16)
+[data/timezones.ts:16](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/data/timezones.ts#L16)

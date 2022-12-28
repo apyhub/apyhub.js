@@ -1,16 +1,13 @@
 {
+  "name": "apyhub",
   "version": "0.1.8",
-  "repository": "https://github.com/apyhub/apyhub.js",
-  "license": "MIT",
+  "description": "",
   "main": "dist/index.js",
-  "typings": "dist/index.d.ts",
+  "module": "dist/apyhub.js.esm.js",
+  "browser": "",
   "files": [
-    "dist",
-    "src"
+    "dist"
   ],
-  "engines": {
-    "node": ">=10"
-  },
   "scripts": {
     "start": "tsdx watch",
     "build": "tsdx build",
@@ -19,32 +16,20 @@
     "prepare": "tsdx build && husky install",
     "size": "size-limit",
     "analyze": "size-limit --why",
-    "docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts"
+    "docs": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts",
+    "version": "typedoc --plugin typedoc-plugin-markdown --out docs src/index.ts && git add docs",
+    "release": "np"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "tsdx lint"
-    }
-  },
-  "prettier": {
-    "printWidth": 80,
-    "semi": true,
-    "singleQuote": false,
-    "trailingComma": "es5"
-  },
-  "name": "apyhub",
+  "repository": "https://github.com/apyhub/apyhub.js",
+  "keywords": [],
   "author": "edy@apyhub.com",
-  "module": "dist/apyhub.js.esm.js",
-  "size-limit": [
-    {
-      "path": "dist/apyhub.js.cjs.production.min.js",
-      "limit": "10 KB"
-    },
-    {
-      "path": "dist/apyhub.js.esm.js",
-      "limit": "10 KB"
-    }
-  ],
+  "license": "MIT",
+  "bugs": "",
+  "homepage": "",
+  "dependencies": {
+    "cross-fetch": "^3.1.5",
+    "form-data": "^4.0.0"
+  },
   "devDependencies": {
     "@size-limit/preset-small-lib": "^8.1.0",
     "husky": "^8.0.0",
@@ -56,8 +41,32 @@
     "typedoc-plugin-markdown": "^3.14.0",
     "typescript": "^4.9.4"
   },
-  "dependencies": {
-    "cross-fetch": "^3.1.5",
-    "form-data": "^4.0.0"
-  }
+  "peerDependencies": {},
+  "optionalDependencies": {},
+  "bundledDependencies": [],
+  "config": {},
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": false,
+    "trailingComma": "es5"
+  },
+  "engines": {
+    "node": ">=10"
+  },
+  "size-limit": [
+    {
+      "path": "dist/apyhub.js.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/apyhub.js.esm.js",
+      "limit": "10 KB"
+    }
+  ]
 }

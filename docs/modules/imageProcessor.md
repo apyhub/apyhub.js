@@ -53,7 +53,7 @@ const compress = async () => {
 
 #### Defined in
 
-[imageProcessor/compress.ts:32](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/compress.ts#L32)
+[imageProcessor/compress.ts:32](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/imageProcessor/compress.ts#L32)
 
 ___
 
@@ -99,7 +99,7 @@ const crop = async () => {
 
 #### Defined in
 
-[imageProcessor/crop.ts:35](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/crop.ts#L35)
+[imageProcessor/crop.ts:35](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/imageProcessor/crop.ts#L35)
 
 ___
 
@@ -145,7 +145,7 @@ const resize = async () => {
 
 #### Defined in
 
-[imageProcessor/resize.ts:35](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/resize.ts#L35)
+[imageProcessor/resize.ts:35](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/imageProcessor/resize.ts#L35)
 
 ___
 
@@ -189,4 +189,4 @@ const watermark = async () => {
 
 #### Defined in
 
-[imageProcessor/watermark.ts:34](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/imageProcessor/watermark.ts#L34)
+[imageProcessor/watermark.ts:34](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/imageProcessor/watermark.ts#L34)

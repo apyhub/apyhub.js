@@ -53,7 +53,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/csvToExcel.ts:27](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/csvToExcel.ts#L27)
+[convert/csvToExcel.ts:27](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/csvToExcel.ts#L27)
 
 ___
 
@@ -94,7 +94,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/htmlToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/htmlToPdf.ts#L28)
+[convert/htmlToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/htmlToPdf.ts#L28)
 
 ___
 
@@ -135,7 +135,7 @@ A promise that resolves to the data for the output file or `undefined` if the re
 
 #### Defined in
 
-[convert/imageToPdf.ts:29](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/imageToPdf.ts#L29)
+[convert/imageToPdf.ts:29](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/imageToPdf.ts#L29)
 
 ___
 
@@ -177,7 +177,7 @@ const markdownToHtml = async () => {
 
 #### Defined in
 
-[convert/markdownToHtml.ts:30](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/markdownToHtml.ts#L30)
+[convert/markdownToHtml.ts:30](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/markdownToHtml.ts#L30)
 
 ___
 
@@ -220,7 +220,7 @@ const presentationToPdf = async () => {
 
 #### Defined in
 
-[convert/presentationToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/presentationToPdf.ts#L31)
+[convert/presentationToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/presentationToPdf.ts#L31)
 
 ___
 
@@ -261,7 +261,7 @@ const spreadsheetToPdf = async () => {
 
 #### Defined in
 
-[convert/spreadsheetToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/spreadsheetToPdf.ts#L28)
+[convert/spreadsheetToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/spreadsheetToPdf.ts#L28)
 
 ___
 
@@ -302,4 +302,4 @@ const wordToPdf = async () => {
 
 #### Defined in
 
-[convert/wordToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/convert/wordToPdf.ts#L28)
+[convert/wordToPdf.ts:28](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/convert/wordToPdf.ts#L28)

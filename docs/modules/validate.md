@@ -48,7 +48,7 @@ const email = async () => {
 
 #### Defined in
 
-[validate/email.ts:24](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/validate/email.ts#L24)
+[validate/email.ts:24](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/validate/email.ts#L24)
 
 ___
 
@@ -88,7 +88,7 @@ const validatePostcode = async () => {
 
 #### Defined in
 
-[validate/postcode.ts:25](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/validate/postcode.ts#L25)
+[validate/postcode.ts:25](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/validate/postcode.ts#L25)
 
 ___
 
@@ -125,4 +125,4 @@ const validateVat = async () => {
 
 #### Defined in
 
-[validate/vat.ts:23](https://github.com/apyhub/apyhub.js/blob/84a06ba/src/validate/vat.ts#L23)
+[validate/vat.ts:23](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/validate/vat.ts#L23)
