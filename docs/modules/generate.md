@@ -76,7 +76,7 @@ const secureArchive = async () => {
 
 #### Defined in
 
-[generate/archive.ts:48](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/archive.ts#L48)
+[generate/archive.ts:48](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/archive.ts#L48)
 
 ___
 
@@ -117,7 +117,7 @@ const barcode = async () => {
 
 #### Defined in
 
-[generate/barcode.ts:25](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/barcode.ts#L25)
+[generate/barcode.ts:25](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/barcode.ts#L25)
 
 ___
 
@@ -171,7 +171,7 @@ A promise that resolves with the chart data if successful.
 
 #### Defined in
 
-[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/charts.ts#L37)
+[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/charts.ts#L37)
 
 ___
 
@@ -235,7 +235,7 @@ const ical = async () => {
 
 #### Defined in
 
-[generate/ical.ts:47](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/ical.ts#L47)
+[generate/ical.ts:47](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/ical.ts#L47)
 
 ___
 
@@ -277,7 +277,7 @@ const pdf = async () => {
 
 #### Defined in
 
-[generate/pdf.ts:26](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/pdf.ts#L26)
+[generate/pdf.ts:26](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/pdf.ts#L26)
 
 ___
 
@@ -318,7 +318,7 @@ const qr = async () => {
 
 #### Defined in
 
-[generate/qr.ts:25](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/qr.ts#L25)
+[generate/qr.ts:25](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/qr.ts#L25)
 
 ___
 
@@ -364,7 +364,7 @@ const screenshot = async () => {
 
 #### Defined in
 
-[generate/screenshot.ts:30](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/screenshot.ts#L30)
+[generate/screenshot.ts:30](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/screenshot.ts#L30)
 
 ___
 
@@ -409,4 +409,4 @@ const thumbnail = async () => {
 
 #### Defined in
 
-[generate/thumbnail.ts:32](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/generate/thumbnail.ts#L32)
+[generate/thumbnail.ts:32](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/thumbnail.ts#L32)

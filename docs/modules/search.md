@@ -48,4 +48,4 @@ return data;
 
 #### Defined in
 
-[search/fuzzy.ts:24](https://github.com/apyhub/apyhub.js/blob/d3e6ff5/src/search/fuzzy.ts#L24)
+[search/fuzzy.ts:24](https://github.com/apyhub/apyhub.js/blob/d32691b/src/search/fuzzy.ts#L24)
