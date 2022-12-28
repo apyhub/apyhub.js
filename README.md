@@ -1,12 +1,13 @@
 <div align="center">
   <img src="https://apyhub.com/logo.svg" alt="Alt text" width="256px" height="256px">
 
-  # ApyHub for Node.js
+# ApyHub for Node.js
 
 ![npm](https://img.shields.io/npm/v/apyhub)
 ![npm](https://img.shields.io/npm/dt/apyhub)
 ![npm bundle size](https://img.shields.io/bundlephobia/min/apyhub)
 ![Discord](https://img.shields.io/discord/998969119657427024)
+
 </div>
 
 ## About
@@ -66,14 +67,14 @@ initApyhub({
 
 The initApyhub function can also accept an optional options object with the following parameters:
 
-- rateLimit: The rate limit for the API client (default: 1).
+- rateLimit: The rate limit for the API client (valid options are integers from 1 to 5, with a default value of 1).
 - debug: A boolean flag to enable debugging output (default: false).
 
 ```jsx
 import { initApyhub } from "apyhub";
 
 initApyhub("YOUR_APY_TOKEN", {
-  rateLimit: 10,
+  rateLimit: 1,
   debug: true,
 });
 ```
