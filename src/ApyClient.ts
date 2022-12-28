@@ -5,7 +5,7 @@ class ApyClient {
   protected readonly baseUrl = "https://api.apyhub.com";
   protected readonly headers: any;
   private readonly requestQueue: any[];
-  private readonly rateLimit: number;
+  private readonly rateLimit: 1 | 2 | 3 | 4 | 5;
   private readonly rateLimitPeriod: number;
   private rateLimitTimer: any;
   private requestPromises: any[];
@@ -18,7 +18,7 @@ class ApyClient {
           username: string;
           password: string;
         },
-    options?: { rateLimit: number; debug: boolean }
+    options?: { rateLimit: 1 | 2 | 3 | 4 | 5; debug: boolean }
   ) {
     this.headers =
       typeof apyToken === "string"
@@ -187,7 +187,7 @@ function getInstance(
         password: string;
       },
   options?: {
-    rateLimit: number;
+    rateLimit: 1 | 2 | 3 | 4 | 5;
     debug: boolean;
   }
 ): ApyClient {
@@ -204,7 +204,7 @@ function getInstance(
  * Initializes the Apyhub API client.
  * @param {string} apyToken - The Apyhub API token or Basic Authorization credentials.
  * @param {Object} [options] - Options for the API client.
- * @param {number} [options.rateLimit] - The rate limit for the API client.
+ * @param {1 | 2 | 3 | 4 | 5} [options.rateLimit] - The rate limit for the API client.
  */
 function initApyhub(
   apyToken:
@@ -214,7 +214,7 @@ function initApyhub(
         password: string;
       },
   options?: {
-    rateLimit: number;
+    rateLimit: 1 | 2 | 3 | 4 | 5;
     debug: boolean;
   }
 ): void {
