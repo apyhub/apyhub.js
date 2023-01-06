@@ -7,27 +7,30 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Creates a thumbnail image from a file or URL.
  *
+ * @example
+ *   const { generate } = require("apyhub");
+ *
+ *   const thumbnail = async () => {
+ *     const data = await generate.thumbnail({
+ *       responseFormat: "url",
+ *       input: "https://assets.apyhub.com/samples/sample.pdf",
+ *       width: 200,
+ *       height: 200,
+ *     });
+ *     return data;
+ *   };
+ *
  * @param {Object} params - The parameters for the thumbnail creation.
- * @param {"url"|"file"} params.responseFormat - The desired response format.
- * @param {string} [params.output] - The desired file name for the output thumbnail.
- * @param {string|Buffer} params.input - The file or URL to create a thumbnail from.
+ * @param {"url" | "file"} params.responseFormat - The desired response format.
+ * @param {string} [params.output] - The desired file name for the output
+ *   thumbnail.
+ * @param {string | Buffer} params.input - The file or URL to create a thumbnail
+ *   from.
  * @param {number} params.width - The desired width of the thumbnail.
  * @param {number} params.height - The desired height of the thumbnail.
- * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting thumbnail file or URL as a string.
- *
- * @example
- *
- * const { generate } = require("apyhub");
- *
- * const thumbnail = async () => {
- *   const data = await generate.thumbnail({
- *     responseFormat: "url",
- *     input: "https://assets.apyhub.com/samples/sample.pdf",
- *     width: 200,
- *     height: 200,
- *   });
- *  return data;
- * };
+ * @returns {Promise<{ data: string }>} - A promise that resolves with an object
+ *   containing the resulting thumbnail file or URL as a string.
+ * @link https://apyhub.com/utility/image-processor-thumbnail
  */
 async function thumbnail({
   input,
@@ -59,8 +62,9 @@ async function thumbnail({
     endpoint = "file-urls";
   }
 
-  const requestUrl = `https://api.apyhub.com/generate/image/thumbnail/${endpoint}?output=${output ??
-    "thumbnail.png"}&width=${width}&height=${height}`;
+  const requestUrl = `https://api.apyhub.com/generate/image/thumbnail/${endpoint}?output=${
+    output ?? "thumbnail.png"
+  }&width=${width}&height=${height}`;
 
   return await client.request(
     "post",

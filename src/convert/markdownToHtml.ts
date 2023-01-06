@@ -8,24 +8,27 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Convert markdown to HTML.
  *
- * This function converts the given markdown input to HTML and returns the result.
- *
- * @param {Object} params - The parameters for the conversion.
- * @param {string|Buffer} params.input - The markdown input.
- * @param {"url"|"file"} params.responseFormat - The format of the response. Can be "url" or "file".
- * @param {string} [params.output] - The name of the output file.
- * @return {Promise<{data: string}|undefined>} - A promise that resolves with the HTML output.
+ * This function converts the given markdown input to HTML and returns the
+ * result.
  *
  * @example
+ *   const { convert } = require("apyhub");
  *
- * const { convert } = require("apyhub");
+ *   const markdownToHtml = async () => {
+ *     const data = await convert.markdownToHtml({
+ *       input: "# Hello World",
+ *       responseFormat: "url",
+ *     });
+ *   };
  *
- * const markdownToHtml = async () => {
- *   const data = await convert.markdownToHtml({
- *     input: "# Hello World",
- *     responseFormat: "url",
- *   });
- * }
+ * @param {Object} params - The parameters for the conversion.
+ * @param {string | Buffer} params.input - The markdown input.
+ * @param {"url" | "file"} params.responseFormat - The format of the response.
+ *   Can be "url" or "file".
+ * @param {string} [params.output] - The name of the output file.
+ * @returns {Promise<{ data: string } | undefined>} - A promise that resolves
+ *   with the HTML output.
+ * @link https://apyhub.com/utility/converter-md-html
  */
 async function markdownToHtml({
   input,

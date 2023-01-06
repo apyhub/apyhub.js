@@ -4,17 +4,18 @@ import { checkMissingParams } from "../utils/checkMissingParams";
 /**
  * Extracts text from a webpage.
  *
- * @param {string} url - The URL of the webpage.
- * @returns {Promise<{data: string}>} A promise that resolves to the text for the webpage.
- *
  * @example
+ *   const { extract } = require("apyhub");
  *
- * const { extract } = require("apyhub");
+ *   const textFromWebpage = async () => {
+ *     const data = await extract.textFromWebpage("https://www.apyhub.com");
+ *     return data;
+ *   };
  *
- * const textFromWebpage = async () => {
- *   const data = await extract.textFromWebpage("https://www.apyhub.com");
- *   return data;
- * };
+ * @param {string} url - The URL of the webpage.
+ * @returns {Promise<{ data: string }>} A promise that resolves to the text for
+ *   the webpage.
+ * @link https://apyhub.com/utility/extractor-webpage-text
  */
 async function textFromWebpage(url: string): Promise<{ data: string }> {
   const client = getInstance();

@@ -8,26 +8,28 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Compresses an image file or URL.
  *
- * @param {Object} params - The parameters for the image compression.
- * @param {"url"|"file"} params.responseFormat - The desired response format.
- * @param {string|Buffer} params.input - The image file or URL to compress.
- * @param {number} params.quality - The desired quality of the compressed image.
- * @param {string} [params.output] - The desired file name for the output compressed image.
- * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting compressed image file or URL as a string.
- *
  * @example
+ *   const { imageProcessor } = require("apyhub");
  *
- * const { imageProcessor } = require("apyhub");
+ *   const compress = async () => {
+ *     const data = await imageProcessor.compress({
+ *       responseFormat: "url",
+ *       input: "https://assets.apyhub.com/samples/sample.png",
+ *       quality: 50,
+ *       output: "compressed.png",
+ *     });
+ *     return data;
+ *   };
  *
- * const compress = async () => {
- *   const data = await imageProcessor.compress({
- *     responseFormat: "url",
- *     input: "https://assets.apyhub.com/samples/sample.png",
- *     quality: 50,
- *     output: "compressed.png"
- *   });
- *   return data;
- * };
+ * @param {Object} params - The parameters for the image compression.
+ * @param {"url" | "file"} params.responseFormat - The desired response format.
+ * @param {string | Buffer} params.input - The image file or URL to compress.
+ * @param {number} params.quality - The desired quality of the compressed image.
+ * @param {string} [params.output] - The desired file name for the output
+ *   compressed image.
+ * @returns {Promise<{ data: string }>} - A promise that resolves with an object
+ *   containing the resulting compressed image file or URL as a string.
+ * @link https://apyhub.com/utility/image-processor-compress
  */
 async function compress({
   input,

@@ -23,14 +23,22 @@ Validates an email address.
 ```ts
 const { validate } = require("apyhub");
 
-const email = async () => {
-  const data = await validate.email({
-     email: "hello@apyhub.com",
-     checkType: "dns"
-   });
-  return data;
-};
+  const email = async () => {
+    const data = await validate.email({
+      email: "hello@apyhub.com",
+      checkType: "dns",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/validator-dns-email
+
+**`Link`**
+
+https://apyhub.com/utility/validator-academic-email
 
 #### Parameters
 
@@ -44,11 +52,12 @@ const email = async () => {
 
 `Promise`<{ `data`: `boolean`  }\>
 
-- A promise that resolves to an object with the validation result.
+- A promise that resolves to an object
+  with the validation result.
 
 #### Defined in
 
-[validate/email.ts:24](https://github.com/apyhub/apyhub.js/blob/d32691b/src/validate/email.ts#L24)
+[validate/email.ts:28](https://github.com/apyhub/apyhub.js/blob/16344fa/src/validate/email.ts#L28)
 
 ___
 
@@ -63,14 +72,22 @@ Validates a postcode.
 ```ts
 const { validate } = require("apyhub");
 
-const validatePostcode = async () => {
-  const data = await validate.postcode({
-    postcode: "560037",
-    countryCode: "in"
-  });
-  return data;
-};
+  const validatePostcode = async () => {
+    const data = await validate.postcode({
+      postcode: "560037",
+      countryCode: "in",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/data-postcodes-india
+
+**`Link`**
+
+https://apyhub.com/utility/data-postcodes-uk
 
 #### Parameters
 
@@ -84,11 +101,12 @@ const validatePostcode = async () => {
 
 `Promise`<{ `data`: `boolean`  }\>
 
-- A promise that resolves to an object with the validation result.
+- A promise that resolves to an object
+  with the validation result.
 
 #### Defined in
 
-[validate/postcode.ts:25](https://github.com/apyhub/apyhub.js/blob/d32691b/src/validate/postcode.ts#L25)
+[validate/postcode.ts:29](https://github.com/apyhub/apyhub.js/blob/16344fa/src/validate/postcode.ts#L29)
 
 ___
 
@@ -103,13 +121,17 @@ Validates a VAT number.
 ```ts
 const { validate } = require("apyhub");
 
-const validateVat = async () => {
-  const data = await validate.vat({
-    vat: "GB123456789"
-  });
-  return data;
-};
+  const validateVat = async () => {
+    const data = await validate.vat({
+      vat: "GB123456789",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/vat-number-validator
 
 #### Parameters
 
@@ -121,8 +143,9 @@ const validateVat = async () => {
 
 `Promise`<{ `data`: `boolean`  }\>
 
-- A promise that resolves to an object with the validation result.
+- A promise that resolves to an object
+  with the validation result.
 
 #### Defined in
 
-[validate/vat.ts:23](https://github.com/apyhub/apyhub.js/blob/d32691b/src/validate/vat.ts#L23)
+[validate/vat.ts:25](https://github.com/apyhub/apyhub.js/blob/16344fa/src/validate/vat.ts#L25)

@@ -6,17 +6,20 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Extracts metadata from an image.
  *
- * @param {string | Buffer} image - The image file or URL.
- * @returns {Promise<{data: string}>} A promise that resolves to the metadata for the image.
- *
  * @example
+ *   const { extract } = require("apyhub");
  *
- * const { extract } = require("apyhub");
+ *   const imageMetadata = async () => {
+ *     const data = await extract.imageMetadata(
+ *       "https://assets.apyhub.com/samples/sample.jpg"
+ *     );
+ *     return data;
+ *   };
  *
- * const imageMetadata = async () => {
- *   const data = await extract.imageMetadata("https://assets.apyhub.com/samples/sample.jpg");
- *   return data;
- * };
+ * @param {string | Buffer} image - The image file or URL.
+ * @returns {Promise<{ data: string }>} A promise that resolves to the metadata
+ *   for the image.
+ * @link https://apyhub.com/utility/image-processor-extract-metadata
  */
 async function imageMetadata(
   image: string | Buffer
