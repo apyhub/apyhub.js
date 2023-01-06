@@ -25,21 +25,26 @@ Retrieves a list of countries and their associated data.
 ```ts
 import { data } from "apyhub";
 
-const countries = async () => {
-  const data = await data.countries();
-   return data;
-}
+  const countries = async () => {
+    const data = await data.countries();
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/data-lists-country
 
 #### Returns
 
 `Promise`<{ `calling_codes`: `number`[] ; `cca3`: `string` ; `emoji`: `string` ; `key`: `string` ; `value`: `string`  }[]\>
 
-- A promise that resolves with an array of country objects, each containing calling codes, cca3 code, emoji, key, and value properties.
+- A promise that resolves with an array of country objects, each containing
+      calling codes, cca3 code, emoji, key, and value properties.
 
 #### Defined in
 
-[data/countries.ts:16](https://github.com/apyhub/apyhub.js/blob/d32691b/src/data/countries.ts#L16)
+[data/countries.ts:28](https://github.com/apyhub/apyhub.js/blob/16344fa/src/data/countries.ts#L28)
 
 ___
 
@@ -54,11 +59,15 @@ Retrieves information about a specific country.
 ```ts
 import { data } from "apyhub";
 
-const country = () async => {
+  const country = () async => {
   const data = await data.country("United States");
   return data;
-}
+  }
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/data-info-country
 
 #### Parameters
 
@@ -70,11 +79,13 @@ const country = () async => {
 
 `Promise`<{ `calling_code`: `number`[] ; `cca3`: `string` ; `emoji`: `string` ; `key`: `string` ; `subdivision`: { `code`: `string` ; `name`: `string`  }[] ; `value`: `string`  }\>
 
-- A promise that resolves with an object containing the country's value, key, cca3 code, emoji, calling codes, and an array of subdivisions, each with a code and name.
+- A promise that resolves with an object containing the country's value, key,
+      cca3 code, emoji, calling codes, and an array of subdivisions, each
+      with a code and name.
 
 #### Defined in
 
-[data/country.ts:17](https://github.com/apyhub/apyhub.js/blob/d32691b/src/data/country.ts#L17)
+[data/country.ts:29](https://github.com/apyhub/apyhub.js/blob/16344fa/src/data/country.ts#L29)
 
 ___
 
@@ -89,15 +100,19 @@ Converts an amount in one currency to another.
 ```ts
 import { data } from "apyhub";
 
-const currencyConverter = async () => {
-  const response = await data.currencyConverter({
-    source: "USD",
-    target: "EUR",
-    date: "2021-01-01",
-  });
-  return response;
-};
+  const currencyConverter = async () => {
+    const response = await data.currencyConverter({
+      source: "USD",
+      target: "EUR",
+      date: "2021-01-01",
+    });
+    return response;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/currency-conversion
 
 #### Parameters
 
@@ -112,11 +127,12 @@ const currencyConverter = async () => {
 
 `Promise`<{ `data`: `number`  }\>
 
-- A promise that resolves with an object containing the converted amount.
+- A promise that resolves with an object
+  containing the converted amount.
 
 #### Defined in
 
-[data/currencyConverter.ts:25](https://github.com/apyhub/apyhub.js/blob/d32691b/src/data/currencyConverter.ts#L25)
+[data/currencyConverter.ts:28](https://github.com/apyhub/apyhub.js/blob/16344fa/src/data/currencyConverter.ts#L28)
 
 ___
 
@@ -131,21 +147,26 @@ Retrieves a list of currencies and their associated data.
 ```ts
 import { data } from "apy-client";
 
-const currencyList = async () => {
-  const data = await data.currencyList();
-  return data;
-}
+  const currencyList = async () => {
+    const data = await data.currencyList();
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/data-lists-currency
 
 #### Returns
 
 `Promise`<{ `calling_codes`: `number`[] ; `cca3`: `string` ; `emoji`: `string` ; `key`: `string` ; `value`: `string`  }[]\>
 
-- A promise that resolves with an array of currency objects, each containing calling codes, cca3 code, emoji, key, and value properties.
+- A promise that resolves with an array of currency objects, each containing
+      calling codes, cca3 code, emoji, key, and value properties.
 
 #### Defined in
 
-[data/currencyList.ts:16](https://github.com/apyhub/apyhub.js/blob/d32691b/src/data/currencyList.ts#L16)
+[data/currencyList.ts:28](https://github.com/apyhub/apyhub.js/blob/16344fa/src/data/currencyList.ts#L28)
 
 ___
 
@@ -160,18 +181,23 @@ Retrieves a list of timezones and their associated data.
 ```ts
 import { data } from "apy-client";
 
-const timezones = async () => {
-  const data = await data.timezones();
-  return data;
-}
+  const timezones = async () => {
+    const data = await data.timezones();
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/data-lists-timezone
 
 #### Returns
 
 `Promise`<{ `data`: { `abbreviation`: `string`[] ; `key`: `string` ; `utc_time`: `string` ; `value`: `string`  }[]  }\>
 
-- A promise that resolves with an object containing an array of timezone objects, each with a key, value, abbreviation, and utc_time property.
+- A promise that resolves with an object containing an array of timezone
+      objects, each with a key, value, abbreviation, and utc_time property.
 
 #### Defined in
 
-[data/timezones.ts:16](https://github.com/apyhub/apyhub.js/blob/d32691b/src/data/timezones.ts#L16)
+[data/timezones.ts:27](https://github.com/apyhub/apyhub.js/blob/16344fa/src/data/timezones.ts#L27)

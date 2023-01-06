@@ -21,15 +21,19 @@ Fuzzy search.
 ```ts
 const { search } = require("apyhub");
 
-const fuzzy = async () => {
-   const data = await search.fuzzy({
-   source: "taching",
-   target: "teaching is the best qualifying compare another profession",
-   unicodeNormalized: false
- });
-return data;
-};
+  const fuzzy = async () => {
+    const data = await search.fuzzy({
+      source: "taching",
+      target: "teaching is the best qualifying compare another profession",
+      unicodeNormalized: false,
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/search-fuzzy-text
 
 #### Parameters
 
@@ -44,8 +48,10 @@ return data;
 
 `Promise`<{ `data`: `string`[]  } \| `undefined`\>
 
-- A promise that resolves to an object with the fuzzy search result, or undefined if the response format is invalid.
+- A promise that resolves to
+  an object with the fuzzy search result, or undefined if the response format
+  is invalid.
 
 #### Defined in
 
-[search/fuzzy.ts:24](https://github.com/apyhub/apyhub.js/blob/d32691b/src/search/fuzzy.ts#L24)
+[search/fuzzy.ts:28](https://github.com/apyhub/apyhub.js/blob/16344fa/src/search/fuzzy.ts#L28)

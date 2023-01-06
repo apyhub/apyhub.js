@@ -6,17 +6,20 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Extracts text from a PDF file.
  *
- * @param {string | Buffer} pdf - The PDF file or URL.
- * @returns {Promise<{data: string}>} A promise that resolves to the text for the PDF.
- *
  * @example
+ *   const { extract } = require("apyhub");
  *
- * const { extract } = require("apyhub");
+ *   const textFromPdf = async () => {
+ *     const data = await extract.textFromPdf(
+ *       "https://assets.apyhub.com/samples/sample.pdf"
+ *     );
+ *     return data;
+ *   };
  *
- * const textFromPdf = async () => {
- *   const data = await extract.textFromPdf("https://assets.apyhub.com/samples/sample.pdf");
- *   return data;
- * };
+ * @param {string | Buffer} pdf - The PDF file or URL.
+ * @returns {Promise<{ data: string }>} A promise that resolves to the text for
+ *   the PDF.
+ * @link https://apyhub.com/utility/extractor-pdf-text
  */
 async function textFromPdf(pdf: string | Buffer): Promise<{ data: string }> {
   const client = getInstance();

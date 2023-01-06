@@ -8,28 +8,30 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Crops an image file or URL.
  *
+ * @example
+ *   const { imageProcessor } = require("apyhub");
+ *
+ *   const crop = async () => {
+ *     const data = await imageProcessor.crop({
+ *       responseFormat: "url",
+ *       input: "https://assets.apyhub.com/samples/sample.pdf",
+ *       height: 200,
+ *       width: 200,
+ *       output: "output.png",
+ *     });
+ *     return data;
+ *   };
+ *
  * @param {Object} params - The parameters for the image cropping.
- * @param {"url"|"file"} params.responseFormat - The desired response format.
- * @param {string|Buffer} params.input - The image file or URL to crop.
+ * @param {"url" | "file"} params.responseFormat - The desired response format.
+ * @param {string | Buffer} params.input - The image file or URL to crop.
  * @param {number} params.height - The desired height of the cropped image.
  * @param {number} params.width - The desired width of the cropped image.
- * @param {string} [params.output] - The desired file name for the output cropped image.
- * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting cropped image file or URL as a string.
- *
- * @example
- *
- * const { imageProcessor } = require("apyhub");
- *
- * const crop = async () => {
- *   const data = await imageProcessor.crop({
- *     responseFormat: "url",
- *     input: "https://assets.apyhub.com/samples/sample.pdf",
- *     height: 200,
- *     width: 200,
- *     output: "output.png"
- *   });
- *   return data;
- * };
+ * @param {string} [params.output] - The desired file name for the output
+ *   cropped image.
+ * @returns {Promise<{ data: string }>} - A promise that resolves with an object
+ *   containing the resulting cropped image file or URL as a string.
+ * @link https://apyhub.com/utility/image-processor-crop
  */
 
 async function crop({

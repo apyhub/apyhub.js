@@ -8,25 +8,28 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Convert a presentation to PDF.
  *
- * This function converts the given presentation input to PDF and returns the result.
- *
- * @param {Object} params - The parameters for the conversion.
- * @param {string|Buffer} params.input - The presentation input.
- * @param {"url"|"file"} params.responseFormat - The format of the response. Can be "url" or "file".
- * @param {string} [params.output] - The name of the output file.
- * @return {Promise<{data: string}|undefined>} - A promise that resolves with the PDF output.
+ * This function converts the given presentation input to PDF and returns the
+ * result.
  *
  * @example
+ *   const { convert } = require("apyhub");
  *
- * const { convert } = require("apyhub");
+ *   const presentationToPdf = async () => {
+ *     const data = await convert.presentationToPdf({
+ *       input: "https://assets.apyhub.com/samples/sample.pptx",
+ *       responseFormat: "url",
+ *     });
+ *     return data;
+ *   };
  *
- * const presentationToPdf = async () => {
- *   const data = await convert.presentationToPdf({
- *     input: "https://assets.apyhub.com/samples/sample.pptx",
- *     responseFormat: "url",
- *   });
- *   return data
- * };
+ * @param {Object} params - The parameters for the conversion.
+ * @param {string | Buffer} params.input - The presentation input.
+ * @param {"url" | "file"} params.responseFormat - The format of the response.
+ *   Can be "url" or "file".
+ * @param {string} [params.output] - The name of the output file.
+ * @returns {Promise<{ data: string } | undefined>} - A promise that resolves
+ *   with the PDF output.
+ * @link https://apyhub.com/utility/converter-presentation-pdf
  */
 async function presentationToPdf({
   input,

@@ -24,16 +24,20 @@ Compresses an image file or URL.
 ```ts
 const { imageProcessor } = require("apyhub");
 
-const compress = async () => {
-  const data = await imageProcessor.compress({
-    responseFormat: "url",
-    input: "https://assets.apyhub.com/samples/sample.png",
-    quality: 50,
-    output: "compressed.png"
-  });
-  return data;
-};
+  const compress = async () => {
+    const data = await imageProcessor.compress({
+      responseFormat: "url",
+      input: "https://assets.apyhub.com/samples/sample.png",
+      quality: 50,
+      output: "compressed.png",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/image-processor-compress
 
 #### Parameters
 
@@ -49,11 +53,12 @@ const compress = async () => {
 
 `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-- A promise that resolves with an object containing the resulting compressed image file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting compressed image file or URL as a string.
 
 #### Defined in
 
-[imageProcessor/compress.ts:32](https://github.com/apyhub/apyhub.js/blob/d32691b/src/imageProcessor/compress.ts#L32)
+[imageProcessor/compress.ts:34](https://github.com/apyhub/apyhub.js/blob/16344fa/src/imageProcessor/compress.ts#L34)
 
 ___
 
@@ -68,17 +73,21 @@ Crops an image file or URL.
 ```ts
 const { imageProcessor } = require("apyhub");
 
-const crop = async () => {
-  const data = await imageProcessor.crop({
-    responseFormat: "url",
-    input: "https://assets.apyhub.com/samples/sample.pdf",
-    height: 200,
-    width: 200,
-    output: "output.png"
-  });
-  return data;
-};
+  const crop = async () => {
+    const data = await imageProcessor.crop({
+      responseFormat: "url",
+      input: "https://assets.apyhub.com/samples/sample.pdf",
+      height: 200,
+      width: 200,
+      output: "output.png",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/image-processor-crop
 
 #### Parameters
 
@@ -95,11 +104,12 @@ const crop = async () => {
 
 `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-- A promise that resolves with an object containing the resulting cropped image file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting cropped image file or URL as a string.
 
 #### Defined in
 
-[imageProcessor/crop.ts:35](https://github.com/apyhub/apyhub.js/blob/d32691b/src/imageProcessor/crop.ts#L35)
+[imageProcessor/crop.ts:37](https://github.com/apyhub/apyhub.js/blob/16344fa/src/imageProcessor/crop.ts#L37)
 
 ___
 
@@ -114,17 +124,21 @@ Resizes an image file or URL.
 ```ts
 const { imageProcessor } = require("apyhub");
 
-const resize = async () => {
-  const data = await imageProcessor.resize({
-    responseFormat: "url",
-    input: "https://assets.apyhub.com/samples/sample.pdf",
-    height: 200,
-    width: 200,
-    output: "output.png"
-  });
-  return data;
-};
+  const resize = async () => {
+    const data = await imageProcessor.resize({
+      responseFormat: "url",
+      input: "https://assets.apyhub.com/samples/sample.pdf",
+      height: 200,
+      width: 200,
+      output: "output.png",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/image-processor-resize
 
 #### Parameters
 
@@ -141,11 +155,12 @@ const resize = async () => {
 
 `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-- A promise that resolves with an object containing the resulting resized image file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting resized image file or URL as a string.
 
 #### Defined in
 
-[imageProcessor/resize.ts:35](https://github.com/apyhub/apyhub.js/blob/d32691b/src/imageProcessor/resize.ts#L35)
+[imageProcessor/resize.ts:37](https://github.com/apyhub/apyhub.js/blob/16344fa/src/imageProcessor/resize.ts#L37)
 
 ___
 
@@ -160,16 +175,20 @@ Adds a watermark to an image.
 ```ts
 const { imageProcessor } = require("apyhub");
 
-const watermark = async () => {
-  const data = await imageProcessor.watermark({
-    input: "https://assets.apyhub.com/samples/sample.pdf",
-    watermark: "https://assets.apyhub.com/samples/sample.pdf",
-    responseFormat: "url",
-    output: "output.png"
-  });
-  return data;
-};
+  const watermark = async () => {
+    const data = await imageProcessor.watermark({
+      input: "https://assets.apyhub.com/samples/sample.pdf",
+      watermark: "https://assets.apyhub.com/samples/sample.pdf",
+      responseFormat: "url",
+      output: "output.png",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/image-processor-watermark
 
 #### Parameters
 
@@ -185,8 +204,10 @@ const watermark = async () => {
 
 `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-- A promise that resolves to an object with the watermarked image as a URL or file, or undefined if the response format is invalid.
+- A promise that resolves to
+  an object with the watermarked image as a URL or file, or undefined if the
+  response format is invalid.
 
 #### Defined in
 
-[imageProcessor/watermark.ts:34](https://github.com/apyhub/apyhub.js/blob/d32691b/src/imageProcessor/watermark.ts#L34)
+[imageProcessor/watermark.ts:40](https://github.com/apyhub/apyhub.js/blob/16344fa/src/imageProcessor/watermark.ts#L40)

@@ -8,28 +8,30 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 /**
  * Resizes an image file or URL.
  *
+ * @example
+ *   const { imageProcessor } = require("apyhub");
+ *
+ *   const resize = async () => {
+ *     const data = await imageProcessor.resize({
+ *       responseFormat: "url",
+ *       input: "https://assets.apyhub.com/samples/sample.pdf",
+ *       height: 200,
+ *       width: 200,
+ *       output: "output.png",
+ *     });
+ *     return data;
+ *   };
+ *
  * @param {Object} params - The parameters for the image resizing.
- * @param {"url"|"file"} params.responseFormat - The desired response format.
- * @param {string|Buffer} params.input - The image file or URL to resize.
+ * @param {"url" | "file"} params.responseFormat - The desired response format.
+ * @param {string | Buffer} params.input - The image file or URL to resize.
  * @param {number} params.height - The desired height of the resized image.
  * @param {number} params.width - The desired width of the resized image.
- * @param {string} [params.output] - The desired file name for the output resized image.
- * @return {Promise<{data: string}>} - A promise that resolves with an object containing the resulting resized image file or URL as a string.
- *
- * @example
- *
- * const { imageProcessor } = require("apyhub");
- *
- * const resize = async () => {
- *   const data = await imageProcessor.resize({
- *     responseFormat: "url",
- *     input: "https://assets.apyhub.com/samples/sample.pdf",
- *     height: 200,
- *     width: 200,
- *     output: "output.png"
- *   });
- *   return data;
- * };
+ * @param {string} [params.output] - The desired file name for the output
+ *   resized image.
+ * @returns {Promise<{ data: string }>} - A promise that resolves with an object
+ *   containing the resulting resized image file or URL as a string.
+ * @link https://apyhub.com/utility/image-processor-resize
  */
 
 async function resize({

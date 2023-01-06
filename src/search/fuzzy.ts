@@ -1,25 +1,29 @@
 import { getInstance } from "../ApyClient";
 
 /**
- *  Fuzzy search.
+ * Fuzzy search.
+ *
+ * @example
+ *   const { search } = require("apyhub");
+ *
+ *   const fuzzy = async () => {
+ *     const data = await search.fuzzy({
+ *       source: "taching",
+ *       target: "teaching is the best qualifying compare another profession",
+ *       unicodeNormalized: false,
+ *     });
+ *     return data;
+ *   };
+ *
  * @param {Object} options - The options for the function.
  * @param {string} options.source - The source text.
  * @param {string} options.target - The target text.
- * @param {boolean} [options.unicodeNormalized] - Whether the text is unicode normalized. Default is false.
- * @returns {Promise<{data: string}|undefined>} - A promise that resolves to an object with the fuzzy search result, or undefined if the response format is invalid.
- *
- * @example
- *
- * const { search } = require("apyhub");
- *
- * const fuzzy = async () => {
- *    const data = await search.fuzzy({
- *    source: "taching",
- *    target: "teaching is the best qualifying compare another profession",
- *    unicodeNormalized: false
- *  });
- * return data;
- * };
+ * @param {boolean} [options.unicodeNormalized] - Whether the text is unicode
+ *   normalized. Default is false.
+ * @returns {Promise<{ data: string } | undefined>} - A promise that resolves to
+ *   an object with the fuzzy search result, or undefined if the response format
+ *   is invalid.
+ * @link https://apyhub.com/utility/search-fuzzy-text
  */
 async function fuzzy({
   source,

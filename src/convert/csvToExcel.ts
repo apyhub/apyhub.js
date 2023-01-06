@@ -7,22 +7,26 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 /**
  * Converts a CSV file or URL to an Excel file.
+ *
+ * @example
+ *   const { convert } = require("apyhub");
+ *
+ *   const csvToExcel = async () => {
+ *     const data = await convert.csvToExcel({
+ *       input: "https://assets.apyhub.com/samples/sample.csv",
+ *       responseFormat: "url",
+ *     });
+ *     return data;
+ *   };
+ *
  * @param {Object} params - The parameters for the conversion.
  * @param {string | Buffer} params.input - The CSV file or URL.
  * @param {"url" | "file"} params.responseFormat - The format for the response.
  * @param {string} [params.output] - The name for the output Excel file.
- * @returns {Promise<{data: string} | undefined>} A promise that resolves to the data for the output file or `undefined` if the response format is not "url".
- *
- * @example
- * const { convert } = require("apyhub");
- *
- * const csvToExcel = async () => {
- *  const data = await convert.csvToExcel({
- *    input: "https://assets.apyhub.com/samples/sample.csv",
- *    responseFormat: "url",
- *   });
- * return data;
- *  };
+ * @returns {Promise<{ data: string } | undefined>} A promise that resolves to
+ *   the data for the output file or `undefined` if the response format is not
+ *   "url".
+ * @link https://apyhub.com/utility/converter-csv-excel
  */
 async function csvToExcel({
   input,

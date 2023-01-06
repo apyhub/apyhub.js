@@ -28,16 +28,16 @@ Creates an archive file (zip) from a list of files or URLs.
 ```ts
 const { generate } = require("apyhub");
 
-const archive = async () => {
-  const data = await generate.archive({
-    responseFormat: "url",
-    input: [
-      "https://assets.apyhub.com/samples/sample.pdf",
-      "https://assets.apyhub.com/samples/sample.xlsx",
-    ],
-  });
-  return data;
-};
+  const archive = async () => {
+    const data = await generate.archive({
+      responseFormat: "url",
+      input: [
+        "https://assets.apyhub.com/samples/sample.pdf",
+        "https://assets.apyhub.com/samples/sample.xlsx",
+      ],
+    });
+    return data;
+  };
 ```
 
 **`Example`**
@@ -45,18 +45,26 @@ const archive = async () => {
 ```ts
 const { generate } = require("apyhub");
 
-const secureArchive = async () => {
-  const data = await generate.archive({
-    responseFormat: "url",
-    input: [
-      "https://assets.apyhub.com/samples/sample.pdf",
-      "https://assets.apyhub.com/samples/sample.xlsx",
-    ],
-    password: "password",
-  });
-  return data;
-};
+  const secureArchive = async () => {
+    const data = await generate.archive({
+      responseFormat: "url",
+      input: [
+        "https://assets.apyhub.com/samples/sample.pdf",
+        "https://assets.apyhub.com/samples/sample.xlsx",
+      ],
+      password: "password",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/generate-file-archive
+
+**`Link`**
+
+https://apyhub.com/utility/generate-secure-file-archive
 
 #### Parameters
 
@@ -72,11 +80,12 @@ const secureArchive = async () => {
 
 `Promise`<{ `data`: `string`  }\>
 
-- A promise that resolves with an object containing the resulting archive file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting archive file or URL as a string.
 
 #### Defined in
 
-[generate/archive.ts:48](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/archive.ts#L48)
+[generate/archive.ts:51](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/archive.ts#L51)
 
 ___
 
@@ -91,14 +100,18 @@ Generates a barcode image from a string of up to 80 characters.
 ```ts
 const { generate } = require("apyhub");
 
-const barcode = async () => {
-  const data = await generate.barcode({
-    responseFormat: "url",
-    input: "https://apyhub.com",
-  });
-  return data;
-};
+  const barcode = async () => {
+    const data = await generate.barcode({
+      responseFormat: "url",
+      input: "https://apyhub.com",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/generate-bar-code
 
 #### Parameters
 
@@ -113,11 +126,12 @@ const barcode = async () => {
 
 `Promise`<{ `data`: `string`  }\>
 
-- A promise that resolves with an object containing the resulting barcode image file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting barcode image file or URL as a string.
 
 #### Defined in
 
-[generate/barcode.ts:25](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/barcode.ts#L25)
+[generate/barcode.ts:29](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/barcode.ts#L29)
 
 ___
 
@@ -132,24 +146,36 @@ Generates a chart image from data and chart options.
 ```ts
 const { charts } = require("apyhub");
 
-const data = [
- { value: 10, label: "A" },
-{ value: 20, label: "B" },
-{ value: 30, label: "C" },
-{ value: 40, label: "D" },
-]
+  const data = [
+    { value: 10, label: "A" },
+    { value: 20, label: "B" },
+    { value: 30, label: "C" },
+    { value: 40, label: "D" },
+  ];
 
-charts({
-responseFormat: "file",
-chartType: "bar",
-output: "chart.png",
-title: "My Chart",
-theme: "light",
-data,
-}).then((res) => {
-console.log(res);
-});
+  charts({
+    responseFormat: "file",
+    chartType: "bar",
+    output: "chart.png",
+    title: "My Chart",
+    theme: "light",
+    data,
+  }).then((res) => {
+    console.log(res);
+  });
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/pie-chart
+
+**`Link`**
+
+https://apyhub.com/utility/stacked-graph
+
+**`Link`**
+
+https://apyhub.com/utility/bar-graph
 
 #### Parameters
 
@@ -167,11 +193,12 @@ console.log(res);
 
 `Promise`<{ `data`: `string`  }\>
 
-A promise that resolves with the chart data if successful.
+A promise that resolves with the chart
+  data if successful.
 
 #### Defined in
 
-[generate/charts.ts:37](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/charts.ts#L37)
+[generate/charts.ts:47](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/charts.ts#L47)
 
 ___
 
@@ -186,25 +213,29 @@ Generates an iCalendar file from a list of parameters.
 ```ts
 const { generate } = require("apyhub");
 
-const ical = async () => {
+  const ical = async () => {
   const data = await generate.ical({
-    responseFormat: "url",
-    summary: "Meeting",
-    description: "Meeting description",
-    organizerEmail: "your@mail.com",
-    attendeesEmails: ["john@mail.com", "sally@mail.com"],
-    timeZone: "America/New_York",
-    startTime: "10:00",
-    endTime: "11:00",
-    meetingDate: "2020-01-01",
-    recurring: true,
-    recurrence: {
-      frequency: "WEEKLY",
-      count: 5,
-     },
+  responseFormat: "url",
+  summary: "Meeting",
+  description: "Meeting description",
+  organizerEmail: "your@mail.com",
+  attendeesEmails: ["john@mail.com", "sally@mail.com"],
+  timeZone: "America/New_York",
+  startTime: "10:00",
+  endTime: "11:00",
+  meetingDate: "2020-01-01",
+  recurring: true,
+  recurrence: {
+  frequency: "WEEKLY",
+  count: 5,
+  },
   });
   return data;
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/generator-ical
 
 #### Parameters
 
@@ -231,11 +262,12 @@ const ical = async () => {
 
 `Promise`<{ `data`: `string`  }\>
 
-- A promise that resolves with an object containing the resulting iCalendar file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting iCalendar file or URL as a string.
 
 #### Defined in
 
-[generate/ical.ts:47](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/ical.ts#L47)
+[generate/ical.ts:51](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/ical.ts#L51)
 
 ___
 
@@ -250,15 +282,23 @@ Generates a PDF file from an HTML string or URL.
 ```ts
 const { generate } = require("apyhub");
 
-const pdf = async () => {
-  const data = await generate.pdf({
-    responseFormat: "url",
-    input: "https://apyhub.com",
-    landscape: true,
-  });
-  return data;
-};
+  const pdf = async () => {
+    const data = await generate.pdf({
+      responseFormat: "url",
+      input: "https://apyhub.com",
+      landscape: true,
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/generate-url-pdf
+
+**`Link`**
+
+https://apyhub.com/utility/generate-html-pdf
 
 #### Parameters
 
@@ -273,11 +313,12 @@ const pdf = async () => {
 
 `Promise`<{ `data`: `string`  }\>
 
-- A promise that resolves with an object containing the resulting PDF file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting PDF file or URL as a string.
 
 #### Defined in
 
-[generate/pdf.ts:26](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/pdf.ts#L26)
+[generate/pdf.ts:31](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/pdf.ts#L31)
 
 ___
 
@@ -292,14 +333,18 @@ Generates a QR code image from a string.
 ```ts
 const { generate } = require("apyhub");
 
-const qr = async () => {
-  const data = await generate.qr({
-    responseFormat: "url",
-    input: "https://apyhub.com",
-  });
- return data;
-};
+  const qr = async () => {
+    const data = await generate.qr({
+      responseFormat: "url",
+      input: "https://apyhub.com",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/generate-qr-code
 
 #### Parameters
 
@@ -314,11 +359,12 @@ const qr = async () => {
 
 `Promise`<{ `data`: `string`  }\>
 
-- A promise that resolves with an object containing the resulting QR code image file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting QR code image file or URL as a string.
 
 #### Defined in
 
-[generate/qr.ts:25](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/qr.ts#L25)
+[generate/qr.ts:28](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/qr.ts#L28)
 
 ___
 
@@ -333,17 +379,21 @@ Takes a screenshot of a webpage.
 ```ts
 const { generate } = require("apyhub");
 
-const screenshot = async () => {
-  const data = await generate.screenshot({
-    responseFormat: "url",
-    input: "https://apyhub.com",
-    delay: 5,
-    quality: 3,
-    output: "screenshot.png"
-  });
-  return data;
-};
+  const screenshot = async () => {
+    const data = await generate.screenshot({
+      responseFormat: "url",
+      input: "https://apyhub.com",
+      delay: 5,
+      quality: 3,
+      output: "screenshot.png",
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/generate-webpage-screenshot
 
 #### Parameters
 
@@ -360,11 +410,12 @@ const screenshot = async () => {
 
 `Promise`<{ `data`: `string`  }\>
 
-- A promise that resolves with an object containing the resulting screenshot image file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting screenshot image file or URL as a string.
 
 #### Defined in
 
-[generate/screenshot.ts:30](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/screenshot.ts#L30)
+[generate/screenshot.ts:36](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/screenshot.ts#L36)
 
 ___
 
@@ -379,16 +430,20 @@ Creates a thumbnail image from a file or URL.
 ```ts
 const { generate } = require("apyhub");
 
-const thumbnail = async () => {
-  const data = await generate.thumbnail({
-    responseFormat: "url",
-    input: "https://assets.apyhub.com/samples/sample.pdf",
-    width: 200,
-    height: 200,
-  });
- return data;
-};
+  const thumbnail = async () => {
+    const data = await generate.thumbnail({
+      responseFormat: "url",
+      input: "https://assets.apyhub.com/samples/sample.pdf",
+      width: 200,
+      height: 200,
+    });
+    return data;
+  };
 ```
+
+**`Link`**
+
+https://apyhub.com/utility/image-processor-thumbnail
 
 #### Parameters
 
@@ -405,8 +460,9 @@ const thumbnail = async () => {
 
 `Promise`<{ `data`: `string`  } \| `undefined`\>
 
-- A promise that resolves with an object containing the resulting thumbnail file or URL as a string.
+- A promise that resolves with an object
+  containing the resulting thumbnail file or URL as a string.
 
 #### Defined in
 
-[generate/thumbnail.ts:32](https://github.com/apyhub/apyhub.js/blob/d32691b/src/generate/thumbnail.ts#L32)
+[generate/thumbnail.ts:35](https://github.com/apyhub/apyhub.js/blob/16344fa/src/generate/thumbnail.ts#L35)

@@ -7,23 +7,26 @@ import { isFileOrUrl } from "../utils/isFileOrUrl";
 
 /**
  * Converts an HTML file or URL to a PDF file.
+ *
+ * @example
+ *   const { convert } = require("apyhub");
+ *
+ *   const htmlToPdf = async () => {
+ *     const data = await convert.htmlToPdf({
+ *       input: "https://assets.apyhub.com/samples/sample.html",
+ *       responseFormat: "url",
+ *     });
+ *     return data;
+ *   };
+ *
  * @param {Object} params - The parameters for the conversion.
  * @param {string | Buffer} params.input - The HTML file or URL.
  * @param {"url" | "file"} params.responseFormat - The format for the response.
  * @param {string} [params.output] - The name for the output PDF file.
- * @returns {Promise<{data: string} | undefined>} A promise that resolves to the data for the output file or `undefined` if the response format is not "url".
- *
- * @example
- *
- * const { convert } = require("apyhub");
- *
- * const htmlToPdf = async () => {
- *   const data = await convert.htmlToPdf({
- *     input: "https://assets.apyhub.com/samples/sample.html",
- *     responseFormat: "url",
- *   });
- *   return data;
- * }
+ * @returns {Promise<{ data: string } | undefined>} A promise that resolves to
+ *   the data for the output file or `undefined` if the response format is not
+ *   "url".
+ * @link https://apyhub.com/utility/converter-html-pdf
  */
 async function htmlToPdf({
   input,
