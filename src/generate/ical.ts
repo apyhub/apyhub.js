@@ -74,7 +74,7 @@ async function ical({
   startTime: string;
   endTime: string;
   meetingDate: string;
-  recurring: boolean;
+  recurring?: boolean;
   recurrence?: {
     frequency: string;
     count: number;
