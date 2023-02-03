@@ -68,7 +68,7 @@ class ApyClient {
     this.requestQueue.push({ method, url, data, headers });
 
     // Create a new promise to store the request response
-    const requestPromise = new Promise(resolve => {
+    const requestPromise = new Promise((resolve) => {
       // Push the promise to the requestPromises array
       this.requestPromises.push(resolve);
     });
@@ -103,29 +103,32 @@ class ApyClient {
     // Process the requests
     for (let i = 0; i < requests.length; i++) {
       const request = requests[i];
-
-      let response: any;
-      switch (request.method) {
-        case "get":
-          response = await fetch(request.url, {
-            method: "GET",
-            headers: request.headers,
-          }).then(this.handleResponse.bind(this));
-          break;
-        case "post":
-          response = await fetch(request.url, {
-            method: "POST",
-            headers: request.headers,
-            body:
-              request.data instanceof FormData
-                ? request.data
-                : JSON.stringify(request.data),
-          }).then(this.handleResponse.bind(this));
-          break;
+      try {
+        let response: any;
+        switch (request.method) {
+          case "get":
+            response = await fetch(request.url, {
+              method: "GET",
+              headers: request.headers,
+            });
+            break;
+          case "post":
+            response = await fetch(request.url, {
+              method: "POST",
+              headers: request.headers,
+              body:
+                request.data instanceof FormData
+                  ? request.data
+                  : JSON.stringify(request.data),
+            });
+            break;
+        }
+        // Resolve the corresponding request promise with the response
+        this.requestPromises[i](await this.handleResponse(response));
+      } catch (error) {
+        // Reject the corresponding request promise with the error message
+        this.requestPromises[i](Promise.reject(error));
       }
-
-      // Resolve the corresponding request promise with the response
-      this.requestPromises[i](response);
     }
 
     // Clear the requestPromises array
@@ -202,9 +205,12 @@ function getInstance(
 
 /**
  * Initializes the Apyhub API client.
- * @param {string} apyToken - The Apyhub API token or Basic Authorization credentials.
+ *
+ * @param {string} apyToken - The Apyhub API token or Basic Authorization
+ *   credentials.
  * @param {Object} [options] - Options for the API client.
- * @param {1 | 2 | 3 | 4 | 5} [options.rateLimit] - The rate limit for the API client.
+ * @param {1 | 2 | 3 | 4 | 5} [options.rateLimit] - The rate limit for the API
+ *   client.
  */
 function initApyhub(
   apyToken:
