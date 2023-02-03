@@ -91,13 +91,11 @@ async function ical({
     startTime,
     endTime,
     meetingDate,
-    recurring,
   });
   checkParamTypes({ responseFormat }, ["file", "url"]);
 
-  const url = `https://api.apyhub.com/generate/ical/${responseFormat}?output=${
-    output ?? "invite.ics"
-  }`;
+  const url = `https://api.apyhub.com/generate/ical/${responseFormat}?output=${output ??
+    "invite.ics"}`;
   return await client.request("post", url, {
     summary,
     description,
