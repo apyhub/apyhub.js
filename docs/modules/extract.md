@@ -51,7 +51,7 @@ A promise that resolves to the metadata
 
 #### Defined in
 
-[extract/imageMetadata.ts:24](https://github.com/apyhub/apyhub.js/blob/334efcb/src/extract/imageMetadata.ts#L24)
+[extract/imageMetadata.ts:24](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/imageMetadata.ts#L24)
 
 ___
 
@@ -93,7 +93,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromPdf.ts:24](https://github.com/apyhub/apyhub.js/blob/334efcb/src/extract/textFromPdf.ts#L24)
+[extract/textFromPdf.ts:24](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/textFromPdf.ts#L24)
 
 ___
 
@@ -133,7 +133,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromWebpage.ts:20](https://github.com/apyhub/apyhub.js/blob/334efcb/src/extract/textFromWebpage.ts#L20)
+[extract/textFromWebpage.ts:20](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/textFromWebpage.ts#L20)
 
 ___
 
@@ -175,4 +175,4 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromWord.ts:24](https://github.com/apyhub/apyhub.js/blob/334efcb/src/extract/textFromWord.ts#L24)
+[extract/textFromWord.ts:24](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/textFromWord.ts#L24)

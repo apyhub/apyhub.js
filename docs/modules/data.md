@@ -44,7 +44,7 @@ https://apyhub.com/utility/data-lists-country
 
 #### Defined in
 
-[data/countries.ts:28](https://github.com/apyhub/apyhub.js/blob/334efcb/src/data/countries.ts#L28)
+[data/countries.ts:28](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/data/countries.ts#L28)
 
 ___
 
@@ -85,7 +85,7 @@ https://apyhub.com/utility/data-info-country
 
 #### Defined in
 
-[data/country.ts:29](https://github.com/apyhub/apyhub.js/blob/334efcb/src/data/country.ts#L29)
+[data/country.ts:29](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/data/country.ts#L29)
 
 ___
 
@@ -132,7 +132,7 @@ https://apyhub.com/utility/currency-conversion
 
 #### Defined in
 
-[data/currencyConverter.ts:28](https://github.com/apyhub/apyhub.js/blob/334efcb/src/data/currencyConverter.ts#L28)
+[data/currencyConverter.ts:28](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/data/currencyConverter.ts#L28)
 
 ___
 
@@ -166,7 +166,7 @@ https://apyhub.com/utility/data-lists-currency
 
 #### Defined in
 
-[data/currencyList.ts:28](https://github.com/apyhub/apyhub.js/blob/334efcb/src/data/currencyList.ts#L28)
+[data/currencyList.ts:28](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/data/currencyList.ts#L28)
 
 ___
 
@@ -200,4 +200,4 @@ https://apyhub.com/utility/data-lists-timezone
 
 #### Defined in
 
-[data/timezones.ts:27](https://github.com/apyhub/apyhub.js/blob/334efcb/src/data/timezones.ts#L27)
+[data/timezones.ts:27](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/data/timezones.ts#L27)
