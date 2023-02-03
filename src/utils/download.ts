@@ -13,9 +13,20 @@ function isValidUrl(url: string): boolean {
 /**
  * Downloads data to the specified file path.
  *
- * @param {Blob | string | { data: string; type?: string; arrayBuffer?: () => Promise<ArrayBuffer> }} data - The data to download. Can be a Blob, a string, or an object with a `data` property and optionally a `type` property and an `arrayBuffer` function that returns a Promise for an ArrayBuffer.
+ * @param {| Blob
+ *   | string
+ *   | {
+ *       data: string;
+ *       type?: string;
+ *       arrayBuffer?: () => Promise<ArrayBuffer>;
+ *     }} data
+ *   - The data to download. Can be a Blob, a string, or an object with a `data`
+ *       property and optionally a `type` property and an `arrayBuffer` function
+ *       that returns a Promise for an ArrayBuffer.
+ *
  * @param {string} filePath - The file path to save the downloaded data to.
- * @returns {Promise<void>} A Promise that resolves when the download is complete.
+ * @returns {Promise<void>} A Promise that resolves when the download is
+ *   complete.
  * @throws {Error} If the data is invalid or there is an error writing the file.
  */
 
@@ -49,7 +60,7 @@ export async function download(data: any, filePath: string): Promise<void> {
     throw new Error("Invalid data");
   }
 
-  fs.writeFile(filePath, buffer, err => {
+  fs.writeFile(filePath, buffer, (err) => {
     if (err) {
       throw err;
     }
