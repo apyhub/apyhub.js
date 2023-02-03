@@ -262,11 +262,12 @@ If the data is invalid or there is an error writing the file.
 
 `Promise`<`void`\>
 
-A Promise that resolves when the download is complete.
+A Promise that resolves when the download is
+  complete.
 
 #### Defined in
 
-[utils/download.ts:27](https://github.com/apyhub/apyhub.js/blob/16344fa/src/utils/download.ts#L27)
+[utils/download.ts:38](https://github.com/apyhub/apyhub.js/blob/334efcb/src/utils/download.ts#L38)
 
 ___
 
@@ -291,4 +292,4 @@ Initializes the Apyhub API client.
 
 #### Defined in
 
-[ApyClient.ts:209](https://github.com/apyhub/apyhub.js/blob/16344fa/src/ApyClient.ts#L209)
+[ApyClient.ts:215](https://github.com/apyhub/apyhub.js/blob/334efcb/src/ApyClient.ts#L215)
