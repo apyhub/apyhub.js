@@ -69,11 +69,8 @@ async function archive({
     responseFormat === "file" ? "archive-file" : "archive-url";
   const inputType = isFileOrUrl(input[0]) === "file" ? "files" : "file-urls";
   const url = `
-    https://api.apyhub.com/generate/${endpoint}/${inputType}/${responseType}?output=${
-    output ?? "output.zip"
-  }`;
-
-  console.log(url);
+    https://api.apyhub.com/generate/${endpoint}/${inputType}/${responseType}?output=${output ??
+    "output.zip"}`;
 
   const formData = () => {
     const formData = getFormData(input, "files");

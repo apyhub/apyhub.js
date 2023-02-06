@@ -27,6 +27,7 @@ import {
   textFromWebpage,
   textFromWord,
   imageMetadata,
+  unarchive,
 } from "./extract";
 
 import * as data from "./data";
@@ -50,7 +51,14 @@ import {
 } from "./convert";
 
 import { download } from "./utils/download";
-export { extract, textFromPdf, textFromWebpage, textFromWord, imageMetadata };
+export {
+  extract,
+  textFromPdf,
+  textFromWebpage,
+  textFromWord,
+  imageMetadata,
+  unarchive,
+};
 export { initApyhub };
 export { download };
 
