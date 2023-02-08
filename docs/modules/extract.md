@@ -10,6 +10,7 @@
 - [textFromPdf](extract.md#textfrompdf)
 - [textFromWebpage](extract.md#textfromwebpage)
 - [textFromWord](extract.md#textfromword)
+- [unarchive](extract.md#unarchive)
 
 ## Functions
 
@@ -51,7 +52,7 @@ A promise that resolves to the metadata
 
 #### Defined in
 
-[extract/imageMetadata.ts:24](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/imageMetadata.ts#L24)
+[extract/imageMetadata.ts:24](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/imageMetadata.ts#L24)
 
 ___
 
@@ -93,7 +94,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromPdf.ts:24](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/textFromPdf.ts#L24)
+[extract/textFromPdf.ts:24](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/textFromPdf.ts#L24)
 
 ___
 
@@ -133,7 +134,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromWebpage.ts:20](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/textFromWebpage.ts#L20)
+[extract/textFromWebpage.ts:20](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/textFromWebpage.ts#L20)
 
 ___
 
@@ -175,4 +176,51 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromWord.ts:24](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/extract/textFromWord.ts#L24)
+[extract/textFromWord.ts:24](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/textFromWord.ts#L24)
+
+___
+
+### unarchive
+
+▸ **unarchive**(`params`): `Promise`<{ `data`: `Buffer`  }\>
+
+Extracts the contents of an archive file (zip) to a list of files or URLs.
+
+**`Example`**
+
+```ts
+const { extract } = require("apyhub");
+
+const unarchive = async () => {
+ const data = await extract.unarchive({
+  input: "https://assets.apyhub.com/samples/sample.zip",
+});
+return data;
+};
+```
+
+**`Link`**
+
+https://apyhub.com/utility/extract-file-unarchive
+
+**`Link`**
+
+https://apyhub.com/utility/extract-file-secure-unarchive
+
+#### Parameters
+
+| Name | Type | Description |
+| :------ | :------ | :------ |
+| `params` | `Object` | The parameters for the archive extraction. |
+| `params.input` | `string` \| `Buffer` | The archive file or URL to extract. |
+| `params.password?` | `string` | The password to use for secure extraction. |
+
+#### Returns
+
+`Promise`<{ `data`: `Buffer`  }\>
+
+- A promise that resolves with an object containing the resulting extracted files or URLs as a Buffer.
+
+#### Defined in
+
+[extract/unarchive.ts:28](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/unarchive.ts#L28)

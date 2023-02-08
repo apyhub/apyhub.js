@@ -58,7 +58,7 @@ https://apyhub.com/utility/image-processor-compress
 
 #### Defined in
 
-[imageProcessor/compress.ts:34](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/imageProcessor/compress.ts#L34)
+[imageProcessor/compress.ts:34](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/imageProcessor/compress.ts#L34)
 
 ___
 
@@ -109,7 +109,7 @@ https://apyhub.com/utility/image-processor-crop
 
 #### Defined in
 
-[imageProcessor/crop.ts:37](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/imageProcessor/crop.ts#L37)
+[imageProcessor/crop.ts:37](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/imageProcessor/crop.ts#L37)
 
 ___
 
@@ -160,7 +160,7 @@ https://apyhub.com/utility/image-processor-resize
 
 #### Defined in
 
-[imageProcessor/resize.ts:37](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/imageProcessor/resize.ts#L37)
+[imageProcessor/resize.ts:37](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/imageProcessor/resize.ts#L37)
 
 ___
 
@@ -210,4 +210,4 @@ https://apyhub.com/utility/image-processor-watermark
 
 #### Defined in
 
-[imageProcessor/watermark.ts:40](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/imageProcessor/watermark.ts#L40)
+[imageProcessor/watermark.ts:40](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/imageProcessor/watermark.ts#L40)

@@ -35,6 +35,7 @@
 - [textFromWord](modules.md#textfromword)
 - [thumbnail](modules.md#thumbnail)
 - [timezones](modules.md#timezones)
+- [unarchive](modules.md#unarchive)
 - [watermark](modules.md#watermark)
 - [wordToPdf](modules.md#wordtopdf)
 
@@ -229,6 +230,12 @@ Re-exports [timezones](modules/data.md#timezones)
 
 ___
 
+### unarchive
+
+Re-exports [unarchive](modules/extract.md#unarchive)
+
+___
+
 ### watermark
 
 Re-exports [watermark](modules/imageProcessor.md#watermark)
@@ -267,7 +274,7 @@ A Promise that resolves when the download is
 
 #### Defined in
 
-[utils/download.ts:38](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/utils/download.ts#L38)
+[utils/download.ts:38](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/utils/download.ts#L38)
 
 ___
 
@@ -292,4 +299,4 @@ Initializes the Apyhub API client.
 
 #### Defined in
 
-[ApyClient.ts:215](https://github.com/apyhub/apyhub.js/blob/b4b0557/src/ApyClient.ts#L215)
+[ApyClient.ts:215](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/ApyClient.ts#L215)
