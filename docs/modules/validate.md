@@ -57,7 +57,7 @@ https://apyhub.com/utility/validator-academic-email
 
 #### Defined in
 
-[validate/email.ts:28](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/validate/email.ts#L28)
+[validate/email.ts:28](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/validate/email.ts#L28)
 
 ___
 
@@ -106,7 +106,7 @@ https://apyhub.com/utility/data-postcodes-uk
 
 #### Defined in
 
-[validate/postcode.ts:29](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/validate/postcode.ts#L29)
+[validate/postcode.ts:29](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/validate/postcode.ts#L29)
 
 ___
 
@@ -148,4 +148,4 @@ https://apyhub.com/utility/vat-number-validator
 
 #### Defined in
 
-[validate/vat.ts:25](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/validate/vat.ts#L25)
+[validate/vat.ts:25](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/validate/vat.ts#L25)

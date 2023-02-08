@@ -59,7 +59,7 @@ A promise that resolves to
 
 #### Defined in
 
-[convert/csvToExcel.ts:31](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/csvToExcel.ts#L31)
+[convert/csvToExcel.ts:31](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/csvToExcel.ts#L31)
 
 ___
 
@@ -106,7 +106,7 @@ A promise that resolves to
 
 #### Defined in
 
-[convert/htmlToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/htmlToPdf.ts#L31)
+[convert/htmlToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/htmlToPdf.ts#L31)
 
 ___
 
@@ -153,7 +153,7 @@ A promise that resolves to
 
 #### Defined in
 
-[convert/imageToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/imageToPdf.ts#L31)
+[convert/imageToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/imageToPdf.ts#L31)
 
 ___
 
@@ -201,7 +201,7 @@ https://apyhub.com/utility/converter-md-html
 
 #### Defined in
 
-[convert/markdownToHtml.ts:33](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/markdownToHtml.ts#L33)
+[convert/markdownToHtml.ts:33](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/markdownToHtml.ts#L33)
 
 ___
 
@@ -250,7 +250,7 @@ https://apyhub.com/utility/converter-presentation-pdf
 
 #### Defined in
 
-[convert/presentationToPdf.ts:34](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/presentationToPdf.ts#L34)
+[convert/presentationToPdf.ts:34](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/presentationToPdf.ts#L34)
 
 ___
 
@@ -297,7 +297,7 @@ https://apyhub.com/utility/converter-spreadsheet-pdf
 
 #### Defined in
 
-[convert/spreadsheetToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/spreadsheetToPdf.ts#L31)
+[convert/spreadsheetToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/spreadsheetToPdf.ts#L31)
 
 ___
 
@@ -344,4 +344,4 @@ https://apyhub.com/utility/converter-doc-pdf
 
 #### Defined in
 
-[convert/wordToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/convert/wordToPdf.ts#L31)
+[convert/wordToPdf.ts:31](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/convert/wordToPdf.ts#L31)

@@ -52,7 +52,7 @@ A promise that resolves to the metadata
 
 #### Defined in
 
-[extract/imageMetadata.ts:24](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/imageMetadata.ts#L24)
+[extract/imageMetadata.ts:24](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/extract/imageMetadata.ts#L24)
 
 ___
 
@@ -94,7 +94,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromPdf.ts:24](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/textFromPdf.ts#L24)
+[extract/textFromPdf.ts:24](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/extract/textFromPdf.ts#L24)
 
 ___
 
@@ -134,7 +134,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromWebpage.ts:20](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/textFromWebpage.ts#L20)
+[extract/textFromWebpage.ts:20](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/extract/textFromWebpage.ts#L20)
 
 ___
 
@@ -176,7 +176,7 @@ A promise that resolves to the text for
 
 #### Defined in
 
-[extract/textFromWord.ts:24](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/textFromWord.ts#L24)
+[extract/textFromWord.ts:24](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/extract/textFromWord.ts#L24)
 
 ___
 
@@ -223,4 +223,4 @@ https://apyhub.com/utility/extract-file-secure-unarchive
 
 #### Defined in
 
-[extract/unarchive.ts:28](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/extract/unarchive.ts#L28)
+[extract/unarchive.ts:28](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/extract/unarchive.ts#L28)

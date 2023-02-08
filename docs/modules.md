@@ -274,7 +274,7 @@ A Promise that resolves when the download is
 
 #### Defined in
 
-[utils/download.ts:38](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/utils/download.ts#L38)
+[utils/download.ts:38](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/utils/download.ts#L38)
 
 ___
 
@@ -299,4 +299,4 @@ Initializes the Apyhub API client.
 
 #### Defined in
 
-[ApyClient.ts:215](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/ApyClient.ts#L215)
+[ApyClient.ts:215](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/ApyClient.ts#L215)

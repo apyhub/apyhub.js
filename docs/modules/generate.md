@@ -85,7 +85,7 @@ https://apyhub.com/utility/generate-secure-file-archive
 
 #### Defined in
 
-[generate/archive.ts:51](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/archive.ts#L51)
+[generate/archive.ts:51](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/archive.ts#L51)
 
 ___
 
@@ -131,7 +131,7 @@ https://apyhub.com/utility/generate-bar-code
 
 #### Defined in
 
-[generate/barcode.ts:29](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/barcode.ts#L29)
+[generate/barcode.ts:29](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/barcode.ts#L29)
 
 ___
 
@@ -198,7 +198,7 @@ A promise that resolves with the chart
 
 #### Defined in
 
-[generate/charts.ts:47](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/charts.ts#L47)
+[generate/charts.ts:47](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/charts.ts#L47)
 
 ___
 
@@ -267,7 +267,7 @@ https://apyhub.com/utility/generator-ical
 
 #### Defined in
 
-[generate/ical.ts:51](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/ical.ts#L51)
+[generate/ical.ts:51](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/ical.ts#L51)
 
 ___
 
@@ -318,7 +318,7 @@ https://apyhub.com/utility/generate-html-pdf
 
 #### Defined in
 
-[generate/pdf.ts:31](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/pdf.ts#L31)
+[generate/pdf.ts:31](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/pdf.ts#L31)
 
 ___
 
@@ -364,7 +364,7 @@ https://apyhub.com/utility/generate-qr-code
 
 #### Defined in
 
-[generate/qr.ts:28](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/qr.ts#L28)
+[generate/qr.ts:28](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/qr.ts#L28)
 
 ___
 
@@ -415,7 +415,7 @@ https://apyhub.com/utility/generate-webpage-screenshot
 
 #### Defined in
 
-[generate/screenshot.ts:36](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/screenshot.ts#L36)
+[generate/screenshot.ts:36](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/screenshot.ts#L36)
 
 ___
 
@@ -465,4 +465,4 @@ https://apyhub.com/utility/image-processor-thumbnail
 
 #### Defined in
 
-[generate/thumbnail.ts:35](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/generate/thumbnail.ts#L35)
+[generate/thumbnail.ts:35](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/generate/thumbnail.ts#L35)

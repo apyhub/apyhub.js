@@ -54,4 +54,4 @@ https://apyhub.com/utility/search-fuzzy-text
 
 #### Defined in
 
-[search/fuzzy.ts:28](https://github.com/apyhub/apyhub.js/blob/76ddcf8/src/search/fuzzy.ts#L28)
+[search/fuzzy.ts:28](https://github.com/apyhub/apyhub.js/blob/d7767a2/src/search/fuzzy.ts#L28)
