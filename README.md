@@ -3,10 +3,10 @@
 
 # ApyHub for Node.js
 
-![npm](https://www.npmjs.com/package/apyhub)
-![npm](https://www.npmjs.com/package/apyhub)
-![npm bundle size](https://bundlephobia.com/package/apyhub@0.1.12)
-![Discord](https://discord.gg/JZagJJcw6F)
+![npm](https://img.shields.io/npm/v/apyhub)
+![npm](https://img.shields.io/npm/dt/apyhub)
+![npm bundle size](https://img.shields.io/bundlephobia/min/apyhub)
+![Discord](https://img.shields.io/discord/998969119657427024)
 
 </div>
 
